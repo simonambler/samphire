@@ -1,0 +1,105 @@
+<y-sheet tag="Catalogue" owner="admin" read="everyone" write="" id="lp5l">
+    <y-title id="crtv">
+        <y-cell id="dte5" tag="Name">Skills</y-cell>
+    </y-title>
+    <y-text id="30ld" tag="Description">
+        <p>Core woodland skills available to characters across species. Add entries from this catalogue to customize a sheet.</p>
+    </y-text>
+    <y-panel id="2cmy">
+        <y-panel-item id="73lu">
+            <y-list tag="Skills" id="t9ia">
+                <y-list-item tag="Skill" id="p2t9">
+                    <b>
+                        <y-cell tag="Name" id="f59t">Foraging</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="66jh">Wits</y-cell>)
+                    <y-cell tag="Level" id="6mv1">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="09wa">Find safe berries, roots, grubs, and clean water in wild terrain.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="tylq">
+                    <b>
+                        <y-cell tag="Name" id="cpw6">Sneak</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="gf76">Quickness</y-cell>)
+                    <y-cell tag="Level" id="8kxn">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="3xw2">Move quietly through grass, brush, tunnels, and branch cover.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="pgir">
+                    <b>
+                        <y-cell tag="Name" id="9mqy">Wayfinding</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="cyek">Heart</y-cell>)
+                    <y-cell tag="Level" id="lzxr">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="45kp">Navigate by landmarks, moss, stars, and remembered trail signs.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="dh90">
+                    <b>
+                        <y-cell tag="Name" id="1711">Clamber</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="8cmk">Quickness</y-cell>)
+                    <y-cell tag="Level" id="1ryj">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="4ren">Climb bark, roots, stone walls, and rope lines without falling.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="x2ku">
+                    <b>
+                        <y-cell tag="Name" id="6rfj">Burrowcraft</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="nlke">Brawn</y-cell>)
+                    <y-cell tag="Level" id="k2aa">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="ctw0">Dig, shore up, and conceal dens, caches, and tunnel shortcuts.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="pm4a">
+                    <b>
+                        <y-cell tag="Name" id="jmcd">Herblore</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="hvpw">Wits</y-cell>)
+                    <y-cell tag="Level" id="gflk">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="04p1">Identify medicinal plants, prepare poultices, and treat common ailments.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="0i4n">
+                    <b>
+                        <y-cell tag="Name" id="gas4">Scurry</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="1lwl">Quickness</y-cell>)
+                    <y-cell tag="Level" id="f8e9">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="wqmz">Sprint through hazards and dodge sudden threats in close quarters.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="8igd">
+                    <b>
+                        <y-cell tag="Name" id="rcfa">Speak Kindly</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="vcmz">Heart</y-cell>)
+                    <y-cell tag="Level" id="apkt">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="6en9">Calm strangers, settle disputes, and earn trust across species.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="nvce">
+                    <b>
+                        <y-cell tag="Name" id="v6zo">Watchfulness</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="pipk">Wits</y-cell>)
+                    <y-cell tag="Level" id="ya76">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="jamz">Spot ambushes, hidden paths, weather shifts, and unusual tracks.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="3l6e">
+                    <b>
+                        <y-cell tag="Name" id="5bca">Staffplay</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="u79t">Brawn</y-cell>)
+                    <y-cell tag="Level" id="6q44">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="sx42">Fight with spears, sticks, and branch-pole weapons in melee.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="8o3c">
+                    <b>
+                        <y-cell tag="Name" id="4o1c">Nightsong</y-cell>
+                    </b>
+            (<y-cell tag="Stat" id="zr3v">Heart</y-cell>)
+                    <y-cell tag="Level" id="l66h">Base=2d4</y-cell>.
+                    <y-cell tag="Summary" id="p1oe">Use calls and songs to coordinate allies in darkness or fog.</y-cell>
+                </y-list-item>
+                <y-catalogue id="ui5o">
+                    <y-catalogue-item filter="Skill" label="Skill" id="v6rr" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

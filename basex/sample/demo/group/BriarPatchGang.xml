@@ -1,0 +1,35 @@
+<y-sheet owner="admin" tag="Group" read="everyone" write="" id="j7o4">
+    <y-title id="ck1z"><y-cell id="wxxh" tag="Name">Briar Patch Gang</y-cell></y-title>
+
+    <y-panel id="lbps">
+        <y-panel-item id="bc1b"><h2>
+            <y-cell id="1pe3">Description</y-cell>
+        </h2><y-text id="os1c"><p>The <em>Briar Patch Gang</em> is an unlikely woodland fellowship bound by loss and stubborn hope.</p><ul><li><p><em>Jan</em>, a quick-tailed squirrel thief, scouts ahead and slips through places no one else can reach.</p></li><li><p><em>Reverend Cecil</em>, a steady mole cleric of Mossburrow, serves as the group's moral compass and healer.</p></li><li><p><em>Freida</em>, a hedgehog courier with a gift for routes and survival, keeps the gang supplied and moving safely between burrows.</p></li><li><p><em>Melony</em>, a travelling frog magician, brings strange lore, crowd-charming confidence, and practical spells when trouble turns dire.</p></li></ul><p>They are known for helping small communities who cannot defend themselves: escorting caravans through root-tunnels, recovering stolen stores, and breaking up weasel raider camps before they grow bold.</p></y-text></y-panel-item>
+    </y-panel>
+
+    <y-panel id="v9j8">
+        <y-panel-item id="7us9">
+            <h2><y-cell id="e1wi">Party</y-cell></h2>
+            <y-list id="59r7"><y-list-item id="lvfi"><a href="/samphire/data/demo/type/character/sheet/Jan/view" target="_blank"><b>
+        Jan
+    </b></a><y-summary id="stmk" url="/samphire/data/demo/type/character/sheet/Jan/view"><i>Br</i> <y-cell>5</y-cell>, <i>Qu</i> <y-cell>11</y-cell>, <i>Wi</i> <y-cell>10</y-cell>, <i>He</i> <y-cell>7</y-cell>, <i>Lu</i> <y-cell>9</y-cell>. <i>Res</i> <y-cell>7</y-cell>, <i>Sta</i> <y-cell>10</y-cell>, <i>SP</i> <y-cell>0</y-cell>. <i>Skills:</i> <y-cell>Sneak</y-cell> <y-cell>12</y-cell>, <y-cell>Clamber</y-cell> <y-cell>11</y-cell>, <y-cell>Watchfulness</y-cell> <y-cell>9</y-cell>. <i>Talents:</i> <y-cell>Branchbound</y-cell>. <i>Spells:</i> . <i>Gear:</i> <y-cell>Throwing Darts</y-cell>, <y-cell>Rootline Map</y-cell>.</y-summary></y-list-item><y-list-item id="aztu"><a href="/samphire/data/demo/type/character/sheet/Cecil/view" target="_blank"><b>
+        Reverend Cecil
+    </b></a><y-summary id="qv2p" url="/samphire/data/demo/type/character/sheet/Cecil/view"><i>Br</i> <y-cell>8</y-cell>, <i>Qu</i> <y-cell>5</y-cell>, <i>Wi</i> <y-cell>9</y-cell>, <i>He</i> <y-cell>12</y-cell>, <i>Lu</i> <y-cell>7</y-cell>. <i>Res</i> <y-cell>9</y-cell>, <i>Sta</i> <y-cell>14</y-cell>, <i>SP</i> <y-cell>8</y-cell>. <i>Skills:</i> <y-cell>Speak Kindly</y-cell> <y-cell>13</y-cell>, <y-cell>Herblore</y-cell> <y-cell>11</y-cell>, <y-cell>Burrowcraft</y-cell> <y-cell>9</y-cell>. <i>Talents:</i> <y-cell>Burrow Dash</y-cell>. <i>Spells:</i> <y-cell>Dew Mend</y-cell>, <y-cell>Thorn Ward</y-cell>, <y-cell>Burrow Whisper</y-cell>. <i>Gear:</i> <y-cell>Oak Staff</y-cell>, <y-cell>Incense Bundle</y-cell>, <y-cell>Herb Wrap Kit</y-cell>.</y-summary></y-list-item><y-list-item id="4o2v"><a href="/samphire/data/demo/type/character/sheet/Freida/view" target="_blank"><b>
+        Freida
+    </b></a><y-summary id="4nl8" url="/samphire/data/demo/type/character/sheet/Freida/view"><i>Br</i> <y-cell>7</y-cell>, <i>Qu</i> <y-cell>9</y-cell>, <i>Wi</i> <y-cell>8</y-cell>, <i>He</i> <y-cell>10</y-cell>, <i>Lu</i> <y-cell>6</y-cell>. <i>Res</i> <y-cell>8</y-cell>, <i>Sta</i> <y-cell>12</y-cell>, <i>SP</i> <y-cell>4</y-cell>. <i>Skills:</i> <y-cell>Foraging</y-cell> <y-cell>9</y-cell>, <y-cell>Sneak</y-cell> <y-cell>10</y-cell>, <y-cell>Wayfinding</y-cell> <y-cell>8</y-cell>. <i>Talents:</i> <y-cell>Roll Into A Ball</y-cell>. <i>Spells:</i> <y-cell>Lantern Glow</y-cell>. <i>Gear:</i> <y-cell>Thorn Spear</y-cell>, <y-cell>Messenger Satchel</y-cell>.</y-summary></y-list-item><y-list-item id="4mna"><a href="/samphire/data/demo/type/character/sheet/Melony/view" target="_blank"><b>
+        Melony
+    </b></a><y-summary id="igpv" url="/samphire/data/demo/type/character/sheet/Melony/view"><i>Br</i> <y-cell>4</y-cell>, <i>Qu</i> <y-cell>8</y-cell>, <i>Wi</i> <y-cell>11</y-cell>, <i>He</i> <y-cell>10</y-cell>, <i>Lu</i> <y-cell>12</y-cell>. <i>Res</i> <y-cell>6</y-cell>, <i>Sta</i> <y-cell>9</y-cell>, <i>SP</i> <y-cell>10</y-cell>. <i>Skills:</i> <y-cell>Nightsong</y-cell> <y-cell>11</y-cell>, <y-cell>Speak Kindly</y-cell> <y-cell>10</y-cell>, <y-cell>Watchfulness</y-cell> <y-cell>10</y-cell>. <i>Talents:</i> <y-cell>Spring Leap</y-cell>. <i>Spells:</i> <y-cell>Lantern Glow</y-cell>, <y-cell>Acorn Bolt</y-cell>, <y-cell>Gust Hop</y-cell>, <y-cell>Moonveil</y-cell>. <i>Gear:</i> <y-cell>Briar Knife</y-cell>, <y-cell>Conjurer's Pouch</y-cell>, <y-cell>Sap Lantern</y-cell>.</y-summary></y-list-item>
+                <y-catalogue id="ls5a">
+                    <y-catalogue-item filter="Character" label="Character" id="wt9c" url="/samphire/data/demo/type/character"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+
+    <y-panel id="bx18">
+        <y-panel-item id="6p0n">
+            <h2><y-cell id="jby6">Notes</y-cell></h2>
+            <y-text id="wmg7"><p>A season ago, the <em>Ashfall Fire</em> swept through the briar hedges between Mossburrow and Fernwater Hollow. The blaze destroyed store-burrows, collapsed old tunnels, and left dozens missing when a weasel salvage crew blocked rescue paths to seize valuables from the ruins. Each member of the gang lost something in the disaster:</p><ul><li><p><em>Jan</em> lost her treetop refuge,</p></li><li><p><em>Cecil</em> lost parish archives and several patients,</p></li><li><p><em>Freida</em> lost family stores and her mentor courier,</p></li><li><p><em>Melony</em> lost her travelling troupe and stage gear.</p></li></ul><p>They first stood together during the evacuation, then stayed together when they discovered evidence that the fire had not been entirely accidental. Their shared mission is to rebuild safe routes and homes for displaced woodland folk, uncover who profited from the Ashfall tragedy, and dismantle the smuggling ring that now uses the burned borderlands as cover.</p><p>Current objectives:</p><ol><li><p>map and reopen the Old Rootline,</p></li><li><p>recover missing medicine caches from the charred warrens,</p></li><li><p>identify the buyer funding the weasel raiders before the next dry season.</p></li></ol></y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

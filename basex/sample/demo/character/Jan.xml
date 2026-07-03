@@ -1,0 +1,157 @@
+<y-sheet tag="Character" owner="admin" read="everyone" write="" id="4630">
+    <y-title id="btaz">
+        <y-cell id="uxl0" tag="Name">Jan</y-cell>
+    </y-title>
+    <y-text id="kfty" tag="Description">
+        <p>Jan is a nimble squirrel thief from the high branches of Fernwater Hollow, light-pawed and quick-witted, with a talent for acquiring things that aren't quite hers to take.</p>
+    </y-text>
+    <y-panel id="xgfp">
+        <y-panel-item id="zerm">
+            <y-array id="fyj3">
+                <y-array-item id="9azi" label="Species">
+                    <y-cell id="eyr6" tag="Species">Squirrel</y-cell>
+                </y-array-item>
+                <y-array-item id="t47s" label="Calling">
+                    <y-cell id="h2dz" tag="Calling">Thief</y-cell>
+                </y-array-item>
+                <y-array-item id="i8al" label="Home">
+                    <y-cell id="70xp" tag="Home">Fernwater Hollow</y-cell>
+                </y-array-item>
+                <y-array-item id="bhwp" label="Season">
+                    <y-cell id="2s0q" tag="Season">Springling</y-cell>
+                </y-array-item>
+                <y-array-item id="lxum" label="Player">
+                    <y-cell id="9k40" tag="Player">Demo</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="3ym6">
+            <y-array id="1r45">
+                <y-array-item id="l1nr" label="Brawn">
+                    <y-cell id="yegv" tag="Brawn">5</y-cell>
+                </y-array-item>
+                <y-array-item id="g0nw" label="Quickness">
+                    <y-cell id="xxsx" tag="Quickness">11</y-cell>
+                </y-array-item>
+                <y-array-item id="hl8u" label="Wits">
+                    <y-cell id="6de9" tag="Wits">10</y-cell>
+                </y-array-item>
+                <y-array-item id="km4z" label="Heart">
+                    <y-cell id="1g7n" tag="Heart">7</y-cell>
+                </y-array-item>
+                <y-array-item id="akej" label="Luck">
+                    <y-cell id="0g9v" tag="Luck">9</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="cdsm">
+            <y-array id="jiyj">
+                <y-array-item id="sozz" label="Resilience">
+                    <y-cell id="fysz" tag="Resilience">7</y-cell>
+                </y-array-item>
+                <y-array-item id="3q1d" label="Stamina Points">
+                    <y-cell id="911x" tag="StaminaPoints">10</y-cell>
+                </y-array-item>
+                <y-array-item id="wqae" label="Spell Points">
+                    <y-cell id="v7l1" tag="SpellPoints">0</y-cell>
+                </y-array-item>
+                <y-array-item id="8ech" label="Seed Coins">
+                    <y-cell id="dqcf" tag="SeedCoins">22</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="r1wr">
+        <y-panel-item id="krid">
+            <h3>Background</h3>
+            <y-text id="rtpv">
+                <p>Jan leaps between the high oak platforms and rope bridges of Fernwater Hollow, lifting purses and lifting spirits in equal measure. She steals mostly from the smug and the overstuffed, and has a strict personal rule against taking anything from anyone who looks hungry.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="nzff">
+        <y-panel-item id="mxg6">
+            <h3>Skills</h3>
+            <y-list tag="Skills" id="j2s8">
+                <y-list-item tag="Skill" id="tm78">
+                    <b><y-cell tag="Name" id="f0x5">Sneak</y-cell></b>
+                    (<y-cell tag="Stat" id="7jhn">Quickness</y-cell>)
+                    <y-cell tag="Level" id="mh7e">12</y-cell>.
+                    <y-cell tag="Summary" id="u10w">Move silently along branches, over rooftops, and through crowded markets.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="fptp">
+                    <b><y-cell tag="Name" id="nwya">Clamber</y-cell></b>
+                    (<y-cell tag="Stat" id="d8ly">Quickness</y-cell>)
+                    <y-cell tag="Level" id="utni">11</y-cell>.
+                    <y-cell tag="Summary" id="nl34">Scale trees, walls, and rickety structures at reckless speed.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="gvly">
+                    <b><y-cell tag="Name" id="zckh">Watchfulness</y-cell></b>
+                    (<y-cell tag="Stat" id="qlsc">Wits</y-cell>)
+                    <y-cell tag="Level" id="iurv">9</y-cell>.
+                    <y-cell tag="Summary" id="a6v9">Spot guards, notice patterns, and read a room before entering it.</y-cell>
+                </y-list-item>
+                <y-catalogue id="djw6">
+                    <y-catalogue-item filter="Skill" label="Skill" id="4la5" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="bz9q">
+        <y-panel-item id="45v4">
+            <h3>Talents</h3>
+            <y-list tag="Talents" id="fil9">
+                <y-list-item tag="Talent" id="iv5n">
+                    <b><y-cell tag="Name" id="tjd7">Branchbound</y-cell></b>
+                    (<y-cell tag="Type" id="yugo">Movement</y-cell>)
+                    <y-cell tag="Summary" id="7c57">Jan can leap between branches or elevated surfaces without a roll, so long as the gap is no wider than her height.</y-cell>
+                </y-list-item>
+                <y-catalogue id="gzd0">
+                    <y-catalogue-item filter="Talent" label="Talent" id="vu85" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="r2y9">
+        <y-panel-item id="dsjw">
+            <h3>Spells</h3>
+            <y-list tag="Spells" id="iumz">
+                <y-catalogue id="twi7">
+                    <y-catalogue-item filter="Spell" label="Spell" id="06xw" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="uik2">
+        <y-panel-item id="caoi">
+            <h3>Gear</h3>
+            <y-list tag="Gear" id="lfza">
+                <y-list-item tag="Weapon" id="0jrz">
+                    <b><y-cell tag="Name" id="2ezi">Throwing Darts</y-cell></b>
+                    (<y-cell tag="Category" id="spvh">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="zgwq">d6+d4</y-cell>,
+                    Reach: <y-cell tag="Reach" id="jn9g">2</y-cell>,
+                    Hands: <y-cell tag="Hands" id="ib4t">1</y-cell>,
+                    <y-cell tag="Notes" id="e10x">Small needle-tipped darts carried in a wrist sheath, easy to conceal.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="ggpo">
+                    <b><y-cell tag="Name" id="duwt">Rootline Map</y-cell></b>
+                    (<y-cell tag="Type" id="w0vr">Navigation</y-cell>)
+                    <y-cell tag="Summary" id="j9x2">A hand-drawn map of Fernwater Hollow's rooftops, escape routes, and guard patrol timings.</y-cell>
+                </y-list-item>
+                <y-catalogue id="2qr8">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="508c" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                    <y-catalogue-item filter="Item" label="Item" id="9a0t" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="z0nd">
+        <y-panel-item id="j5fe">
+            <h3>Notes</h3>
+            <y-text id="ys73">
+                <p>Jan is intended as a copyright-safe example character for the fictional woodland game used in the Samphire demo database.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

@@ -1,0 +1,29 @@
+<y-sheet tag="Group" owner="admin" read="everyone" write="" id="6dtu">
+    <y-title id="14nb"><y-cell id="ct8q" tag="Name">Party</y-cell></y-title>
+
+    <y-panel id="qoej">
+        <y-panel-item id="hzbb"><h2>
+            <y-cell id="pbtf">Description</y-cell>
+        </h2><y-text id="r9do"><p>Description of the party.  Include the members, their roles, and any notable traits.</p></y-text></y-panel-item>
+    </y-panel>
+
+    <y-panel id="4djq">
+        <y-panel-item id="h4ue">
+            <h2><y-cell id="ojt6">Party</y-cell></h2>
+            <y-list id="2x9i">
+                <y-catalogue id="p7vh">
+                    <y-catalogue-item filter="Character" label="Character" id="lhil" url="/samphire/data/demo/type/character"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+
+    <y-panel id="mloe">
+        <y-panel-item id="obwr">
+            <h2><y-cell id="htji">Notes</y-cell></h2>
+            <y-text id="1s34">
+                Some notes about the party, the members, and the adventures they have had together.
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

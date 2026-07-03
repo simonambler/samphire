@@ -1,0 +1,137 @@
+<y-sheet tag="Catalogue" owner="admin" read="everyone" write="" id="74ym">
+    <y-title id="uk39">
+        <y-cell id="f8zh" tag="Name">Weapons</y-cell>
+    </y-title>
+    <y-text id="6al7" tag="Description">
+        <p>Weapons commonly used by woodland folk, from branch staves to sling and dart kits.</p>
+    </y-text>
+    <y-panel id="ywtq">
+        <y-panel-item id="a7ve">
+            <y-list tag="Gear" id="v9tj">
+                <y-list-item tag="Weapon" id="efb4">
+                    <b>
+                        <y-cell tag="Name" id="oi7j">Thorn Spear</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="p0dt">Melee</y-cell>)
+                    <y-cell tag="Damage" id="m7y7">2d6</y-cell>,
+            Reach: <y-cell tag="Reach" id="2g2s">1</y-cell>,
+            Hands: <y-cell tag="Hands" id="ol9j">2</y-cell>,
+                    <y-cell tag="Notes" id="0pny">Balanced for fighting on narrow roots and log bridges.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="4vr1">
+                    <b>
+                        <y-cell tag="Name" id="b483">Briar Knife</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="0jb2">Melee</y-cell>)
+                    <y-cell tag="Damage" id="5y6i">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="0btc">0</y-cell>,
+            Hands: <y-cell tag="Hands" id="f54i">1</y-cell>,
+                    <y-cell tag="Notes" id="zpvn">Small and easy to conceal in a satchel or belt wrap.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="ubvu">
+                    <b>
+                        <y-cell tag="Name" id="zsbi">Oak Staff</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="vxs3">Melee</y-cell>)
+                    <y-cell tag="Damage" id="ta1o">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="yuj5">1</y-cell>,
+            Hands: <y-cell tag="Hands" id="3smx">2</y-cell>,
+                    <y-cell tag="Notes" id="p9bw">Reliable travel weapon that also helps with climbing and balance.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="hkkx">
+                    <b>
+                        <y-cell tag="Name" id="qjkk">Acorn Sling</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="8bj4">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="436a">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="bt13">Far</y-cell>,
+            Hands: <y-cell tag="Hands" id="wcwx">2</y-cell>,
+                    <y-cell tag="Notes" id="90ds">Uses smooth stones or hard acorns as ammunition.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="n8jf">
+                    <b>
+                        <y-cell tag="Name" id="oezt">Hawthorn Bow</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="b49f">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="kkjt">2d6</y-cell>,
+            Reach: <y-cell tag="Reach" id="dnuu">Far</y-cell>,
+            Hands: <y-cell tag="Hands" id="vciq">2</y-cell>,
+                    <y-cell tag="Notes" id="4lhk">Favored by scouts; quiet and effective at woodland distances.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="t6xf">
+                    <b>
+                        <y-cell tag="Name" id="mw47">Nettle Whip</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="2hpa">Melee</y-cell>)
+                    <y-cell tag="Damage" id="fd6g">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="359h">1</y-cell>,
+            Hands: <y-cell tag="Hands" id="ejgm">1</y-cell>,
+                    <y-cell tag="Notes" id="m322">Stings on contact; useful for disarming and controlling space.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="9llz">
+                    <b>
+                        <y-cell tag="Name" id="ftdy">Pebble Hammer</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="le7y">Melee</y-cell>)
+                    <y-cell tag="Damage" id="cu9i">d8+d6</y-cell>,
+            Reach: <y-cell tag="Reach" id="lr5r">0</y-cell>,
+            Hands: <y-cell tag="Hands" id="hiqu">2</y-cell>,
+                    <y-cell tag="Notes" id="b4zu">Heavy but crushing; best in close, direct fights.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="9xtr">
+                    <b>
+                        <y-cell tag="Name" id="rlhd">Bark Shield Spikes</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="bo9x">Melee</y-cell>)
+                    <y-cell tag="Damage" id="ct9a">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="j3eu">0</y-cell>,
+            Hands: <y-cell tag="Hands" id="5bzy">1</y-cell>,
+                    <y-cell tag="Notes" id="j3lt">Short spikes mounted on a buckler for defensive counterstrikes.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="upxb">
+                    <b>
+                        <y-cell tag="Name" id="kz3d">Reed Javelin</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="g784">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="888c">2d6</y-cell>,
+            Reach: <y-cell tag="Reach" id="drk4">Near</y-cell>,
+            Hands: <y-cell tag="Hands" id="72qw">1</y-cell>,
+                    <y-cell tag="Notes" id="hvrl">Light throwing spear carried in bundles by marsh travelers.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="d2r2">
+                    <b>
+                        <y-cell tag="Name" id="rtd9">Pinecone Bomb</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="lbm2">Thrown</y-cell>)
+                    <y-cell tag="Damage" id="aba9">d4+2</y-cell>,
+            Reach: <y-cell tag="Reach" id="ipm4">Near</y-cell>,
+            Hands: <y-cell tag="Hands" id="imcg">1</y-cell>,
+                    <y-cell tag="Notes" id="as2e">Burst of sap and grit distracts foes and obscures a small area.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="kmdy">
+                    <b>
+                        <y-cell tag="Name" id="10zc">Moonglass Darts</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="5vzg">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="guag">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="o2vi">Near</y-cell>,
+            Hands: <y-cell tag="Hands" id="271w">1</y-cell>,
+                    <y-cell tag="Notes" id="ocpl">Fine thrower darts used by scouts and owl sentries.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Weapon" id="n8tu">
+                    <b>
+                        <y-cell tag="Name" id="o5fg">Throwing Darts</y-cell>
+                    </b>
+            (<y-cell tag="Category" id="82hc">Ranged</y-cell>)
+                    <y-cell tag="Damage" id="r4rc">d6+d4</y-cell>,
+            Reach: <y-cell tag="Reach" id="xh78">Near</y-cell>,
+            Hands: <y-cell tag="Hands" id="rg0h">1</y-cell>,
+                    <y-cell tag="Notes" id="bhng">Small needle-tipped darts carried in a wrist sheath, easy to conceal.</y-cell>
+                </y-list-item>
+                <y-catalogue id="akj1">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="t96r" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

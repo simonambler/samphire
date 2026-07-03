@@ -1,0 +1,165 @@
+<y-sheet tag="Character" owner="admin" read="everyone" write="" id="yorq">
+    <y-title id="794e">
+        <y-cell id="chyy" tag="Name">Freida</y-cell>
+    </y-title>
+    <y-text id="ce7u" tag="Description">
+        <p>Freida is a young hedgehog courier from Mossburrow, quick on her paws and determined to help her woodland neighbors.</p>
+    </y-text>
+    <y-panel id="bh5g">
+        <y-panel-item id="u1dy">
+            <y-array id="q6bo">
+                <y-array-item id="h1as" label="Species">
+                    <y-cell id="04h9" tag="Species">Hedgehog</y-cell>
+                </y-array-item>
+                <y-array-item id="cx1c" label="Calling">
+                    <y-cell id="4rai" tag="Calling">Courier</y-cell>
+                </y-array-item>
+                <y-array-item id="7np3" label="Home">
+                    <y-cell id="j9en" tag="Home">Mossburrow</y-cell>
+                </y-array-item>
+                <y-array-item id="sr4v" label="Season">
+                    <y-cell id="wte3" tag="Season">Springling</y-cell>
+                </y-array-item>
+                <y-array-item id="wigr" label="Player">
+                    <y-cell id="e8ns" tag="Player">Demo</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="nhu8">
+            <y-array id="2e71">
+                <y-array-item id="2l42" label="Brawn">
+                    <y-cell id="ihtt" tag="Brawn">7</y-cell>
+                </y-array-item>
+                <y-array-item id="7clz" label="Quickness">
+                    <y-cell id="zz89" tag="Quickness">9</y-cell>
+                </y-array-item>
+                <y-array-item id="wnfz" label="Wits">
+                    <y-cell id="6d6v" tag="Wits">8</y-cell>
+                </y-array-item>
+                <y-array-item id="ci4v" label="Heart">
+                    <y-cell id="muvy" tag="Heart">10</y-cell>
+                </y-array-item>
+                <y-array-item id="qtj6" label="Luck">
+                    <y-cell id="t71x" tag="Luck">6</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="se9t">
+            <y-array id="162d">
+                <y-array-item id="75z9" label="Resilience">
+                    <y-cell id="qovv" tag="Resilience">8</y-cell>
+                </y-array-item>
+                <y-array-item id="6j3w" label="Stamina Points">
+                    <y-cell id="jyls" tag="StaminaPoints">12</y-cell>
+                </y-array-item>
+                <y-array-item id="ec4u" label="Spell Points">
+                    <y-cell id="6a0f" tag="SpellPoints">4</y-cell>
+                </y-array-item>
+                <y-array-item id="kcix" label="Seed Coins">
+                    <y-cell id="azmp" tag="SeedCoins">14</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="xeqg">
+        <y-panel-item id="u31a">
+            <h3>Background</h3>
+            <y-text id="9o99">
+                <p>Freida delivers letters, herbs, and gossip between the stump-villages around Fernwater Hollow. She trusts first, worries second, and keeps a careful map of every safe tunnel in the district.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="7c34">
+        <y-panel-item id="igbp">
+            <h3>Skills</h3>
+            <y-list tag="Skills" id="51z7">
+                <y-list-item tag="Skill" id="z9v0">
+                    <b><y-cell tag="Name" id="12hf">Foraging</y-cell></b>
+                    (<y-cell tag="Stat" id="qm25">Wits</y-cell>)
+                    <y-cell tag="Level" id="gdfx">9</y-cell>.
+                    <y-cell tag="Summary" id="ap32">Spot edible roots, berries, mushrooms, and safe trail snacks.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="9o7s">
+                    <b><y-cell tag="Name" id="icnn">Sneak</y-cell></b>
+                    (<y-cell tag="Stat" id="iq1l">Quickness</y-cell>)
+                    <y-cell tag="Level" id="xwsd">10</y-cell>.
+                    <y-cell tag="Summary" id="833z">Move quietly through brush, roots, and moonlit gardens.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="tvih">
+                    <b><y-cell tag="Name" id="wbcm">Wayfinding</y-cell></b>
+                    (<y-cell tag="Stat" id="oswl">Heart</y-cell>)
+                    <y-cell tag="Level" id="8vyh">8</y-cell>.
+                    <y-cell tag="Summary" id="xc9t">Read landmarks, remember paths, and guide friends home.</y-cell>
+                </y-list-item>
+                <y-catalogue id="njw7">
+                    <y-catalogue-item filter="Skill" label="Skill" id="w2vi" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="mcpa">
+        <y-panel-item id="ww00">
+            <h3>Talents</h3>
+            <y-list tag="Talents" id="piup">
+                <y-list-item tag="Talent" id="e3th">
+                    <b><y-cell tag="Name" id="dcqp">Roll Into A Ball</y-cell></b>
+                    (<y-cell tag="Type" id="g228">Defensive</y-cell>)
+                    <y-cell tag="Summary" id="k8du">Freida can curl up to gain +1 Resilience until her next turn.</y-cell>
+                </y-list-item>
+                <y-catalogue id="76q2">
+                    <y-catalogue-item filter="Talent" label="Talent" id="v9fr" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="5hqt">
+        <y-panel-item id="ado2">
+            <h3>Spells</h3>
+            <y-list tag="Spells" id="grh8">
+                <y-list-item tag="Spell" id="mfnv">
+                    <b><y-cell tag="Name" id="dauc">Lantern Glow</y-cell></b>
+                    (<y-cell tag="School" id="f8ew">Glowmoss</y-cell>)
+                    Cost: <y-cell tag="Cost" id="1rxl">1</y-cell>,
+                    Range: <y-cell tag="Range" id="gdku">Near</y-cell>,
+                    Duration: <y-cell tag="Duration" id="gks9">10 minutes</y-cell>.
+                    <y-cell tag="Summary" id="fcoo">A bead of warm light clings to a leaf, button, or walking stick.</y-cell>
+                </y-list-item>
+                <y-catalogue id="3w4m">
+                    <y-catalogue-item filter="Spell" label="Spell" id="i82h" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="o00r">
+        <y-panel-item id="440m">
+            <h3>Gear</h3>
+            <y-list tag="Gear" id="gmqh">
+                <y-list-item tag="Weapon" id="el6p">
+                    <b><y-cell tag="Name" id="9pol">Thorn Spear</y-cell></b>
+                    (<y-cell tag="Category" id="dh9q">Melee</y-cell>)
+                    <y-cell tag="Damage" id="8nuc">2d6</y-cell>,
+                    Reach: <y-cell tag="Reach" id="2tml">1</y-cell>,
+                    Hands: <y-cell tag="Hands" id="2n1y">2</y-cell>,
+                    <y-cell tag="Notes" id="6sr5">Balanced for fighting off weasels on narrow log bridges.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="ugl4">
+                    <b><y-cell tag="Name" id="kg4j">Messenger Satchel</y-cell></b>
+                    (<y-cell tag="Type" id="kcl0">Travel Gear</y-cell>)
+                    <y-cell tag="Summary" id="2ljy">Waxed-leaf pouch containing thread, chalk, and folded route maps.</y-cell>
+                </y-list-item>
+                <y-catalogue id="t75d">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="nlim" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                    <y-catalogue-item filter="Item" label="Item" id="el1z" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="vr0q">
+        <y-panel-item id="al3q">
+            <h3>Notes</h3>
+            <y-text id="fflv">
+                <p>Freida is intended as a copyright-safe example character for the fictional woodland game used in the Samphire demo database.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

@@ -1,0 +1,125 @@
+<y-sheet owner="admin" tag="Character" read="everyone" write="" id="xzt5">
+    <y-title id="0n15">
+        <y-cell id="s6fi" tag="Name">Hero</y-cell>
+    </y-title>
+    <y-text id="z705" tag="Description"><p>Give a brief description of your character. Include, perhaps, their appearance, personality, motivation, and connection to other characters in the group.</p></y-text>
+    <y-panel id="l2fi">
+        <y-panel-item id="fx9u">
+            <y-array id="jzg1">
+                <y-array-item id="hka4" label="Species">
+                    <y-cell id="3e7h" tag="Species">?</y-cell>
+                </y-array-item>
+                <y-array-item id="z4yx" label="Calling">
+                    <y-cell id="kfyr" tag="Calling">?</y-cell>
+                </y-array-item>
+                <y-array-item id="o3qj" label="Home">
+                    <y-cell id="l0jl" tag="Home">?</y-cell>
+                </y-array-item>
+                <y-array-item id="qhdv" label="Season">
+                    <y-cell id="nfy9" tag="Season">?</y-cell>
+                </y-array-item>
+                <y-array-item id="k9os" label="Player">
+                    <y-cell id="ppjc" tag="Player">?</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="k3wd">
+            <y-array id="fkg1">
+                <y-array-item id="xzgr" label="Brawn">
+                    <y-cell id="t09y" tag="Brawn">2d6 - 1
+</y-cell>
+                </y-array-item>
+                <y-array-item id="8o0b" label="Quickness">
+                    <y-cell id="5bmc" tag="Quickness">2d6 - 1
+</y-cell>
+                </y-array-item>
+                <y-array-item id="ifx8" label="Wits">
+                    <y-cell id="l9u7" tag="Wits">2d6 - 1</y-cell>
+                </y-array-item>
+                <y-array-item id="p2wy" label="Heart">
+                    <y-cell id="6srr" tag="Heart">2d6 - 1</y-cell>
+                </y-array-item>
+                <y-array-item id="o7sq" label="Luck">
+                    <y-cell id="axva" tag="Luck">2d6 -1
+</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="ty8e">
+            <y-array id="mjev">
+                <y-array-item id="64cw" label="Resilience">
+                    <y-cell id="1unq" tag="Resilience">2d6 -1
+</y-cell>
+                </y-array-item>
+                <y-array-item id="7wji" label="Stamina Points">
+                    <y-cell id="9trx" tag="StaminaPoints">2d6 + 6</y-cell>
+                </y-array-item>
+                <y-array-item id="s2os" label="Spell Points">
+                    <y-cell id="6n5i" tag="SpellPoints">0</y-cell>
+                </y-array-item>
+                <y-array-item id="qoqz" label="Seed Coins">
+                    <y-cell id="m45i" tag="SeedCoins">?</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="t71o">
+        <y-panel-item id="0pcu">
+            <h3>Background</h3>
+            <y-text id="fh1h"><p>Give a longer account of your character, including their background and motivation, and their connection to other characters in the group.</p><ul><li><p>How did they come to be an adventurer?</p></li><li><p>What is their dearest ambition?</p></li><li><p>What phrases are they most likely to say?</p></li></ul></y-text>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="ktir">
+        <y-panel-item id="p63z">
+            <h3>Skills</h3>
+            <y-list tag="Skills" id="kwny">
+                
+                
+                
+                <y-catalogue id="ch0k">
+                    <y-catalogue-item filter="Skill" label="Skill" id="9hbf" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="s9mr">
+        <y-panel-item id="qc7n">
+            <h3>Talents</h3>
+            <y-list tag="Talents" id="b4xj">
+                
+                <y-catalogue id="300u">
+                    <y-catalogue-item filter="Talent" label="Talent" id="45fe" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="i5rv">
+        <y-panel-item id="p1p2">
+            <h3>Spells</h3>
+            <y-list tag="Spells" id="vkl9">
+                <y-catalogue id="5alp">
+                    <y-catalogue-item filter="Spell" label="Spell" id="ytbp" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="6d4k">
+        <y-panel-item id="xafc">
+            <h3>Gear</h3>
+            <y-list tag="Gear" id="az0l">
+                
+                
+                <y-catalogue id="9ewl">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="e0v4" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                    <y-catalogue-item filter="Item" label="Item" id="u7gp" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="5zaq">
+        <y-panel-item id="idv6">
+            <h3>Notes</h3>
+            <y-text id="1j43"><p>Duplicate this template to location 'character' to create a new character sheet.</p></y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0">
+
+  <!-- BaseX override for settings contained in the web.xml file of the .WAR distribution. -->
+
+  <!-- A BaseX option can be overwritten by prefixing the key with "org.basex."
+     and specifying it in <context-param/> elements, as shown below.
+     Check out https://docs.basex.org/wiki/Options for a list of all options. -->
+
+  <context-param>
+    <param-name>org.basex.restxqpath</param-name>
+    <param-value>/var/lib/jetty/basex/deploy</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>org.basex.dbpath</param-name>
+    <param-value>/var/lib/jetty/basex/data</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>org.basex.chop</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+  <context-param>
+    <!-- Keepalive interval = 28800 seconds (8 hours) -->
+    <param-name>org.basex.keepalive</param-name>
+    <param-value>28800</param-value>
+  </context-param>
+
+  <session-config>
+    <session-timeout>480</session-timeout>
+    <cookie-config>
+      <http-only>true</http-only>
+    </cookie-config>
+  </session-config>
+
+</web-app>

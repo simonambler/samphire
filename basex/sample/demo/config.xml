@@ -1,0 +1,28 @@
+<configuration>
+    <style>
+    .y-sheet {
+        background-image: url('/static/samphire/images/oldpaper.png');
+        border-image-source: url('/static/samphire/images/woodlandframe.png');
+        border-image-slice: 25%;
+        border-image-repeat: round;
+        border-width: 80px;
+    }
+    </style>
+    <summary tag="Character">
+        <i>Br</i><sp/><cell tag="Brawn"/>,<sp/>
+        <i>Qu</i><sp/><cell tag="Quickness"/>,<sp/>
+        <i>Wi</i><sp/><cell tag="Wits"/>,<sp/>
+        <i>He</i><sp/><cell tag="Heart"/>,<sp/>
+        <i>Lu</i><sp/><cell tag="Luck"/>.<sp/>
+        <i>Res</i><sp/><cell tag="Resilience"/>,<sp/>
+        <i>Sta</i><sp/><cell tag="StaminaPoints"/>,<sp/>
+        <i>SP</i><sp/><cell tag="SpellPoints"/>.<sp/>
+        <i>Skills:</i><sp/><list tag="Skills" sep=", "><item tag="Skill"><cell tag="Name"/><sp/><cell tag="Level"/></item></list>.<sp/>
+        <i>Talents:</i><sp/><list tag="Talents" sep=", "><item tag="Talent"><cell tag="Name"/></item></list>.<sp/>
+        <i>Spells:</i><sp/><list tag="Spells" sep=", "><item tag="Spell"><cell tag="Name"/></item></list>.<sp/>
+        <i>Gear:</i><sp/><list tag="Gear" sep=", ">
+            <item tag="Weapon"><cell tag="Name"/></item>
+            <item tag="Item"><cell tag="Name"/></item>
+        </list>.
+    </summary>
+</configuration>

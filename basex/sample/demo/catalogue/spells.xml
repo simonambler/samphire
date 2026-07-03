@@ -1,0 +1,127 @@
+<y-sheet tag="Catalogue" owner="admin" read="everyone" write="" id="mzwj">
+    <y-title id="avpo">
+        <y-cell id="nbnj" tag="Name">Spells</y-cell>
+    </y-title>
+    <y-text id="00ym" tag="Description">
+        <p>Woodland magic traditions and common spells. Add spells from this catalogue to build custom casters.</p>
+    </y-text>
+    <y-panel id="3cv4">
+        <y-panel-item id="u8eq">
+            <y-list tag="Spells" id="vc37">
+                <y-list-item tag="Spell" id="jq5z">
+                    <b>
+                        <y-cell tag="Name" id="u3yr">Lantern Glow</y-cell>
+                    </b>
+            (<y-cell tag="School" id="lfal">Glowmoss</y-cell>)
+            Cost: <y-cell tag="Cost" id="azpk">1</y-cell>,
+            Range: <y-cell tag="Range" id="dkjn">Near</y-cell>,
+            Duration: <y-cell tag="Duration" id="cw0m">10 minutes</y-cell>.
+                    <y-cell tag="Summary" id="pyqm">A bead of warm light clings to a leaf, button, or walking stick.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="ho7y">
+                    <b>
+                        <y-cell tag="Name" id="x8xw">Bramble Snare</y-cell>
+                    </b>
+            (<y-cell tag="School" id="zxiy">Thorncraft</y-cell>)
+            Cost: <y-cell tag="Cost" id="rvcj">2</y-cell>,
+            Range: <y-cell tag="Range" id="uxz6">Near</y-cell>,
+            Duration: <y-cell tag="Duration" id="88bx">3 rounds</y-cell>.
+                    <y-cell tag="Summary" id="jy6i">Quick-growing vines tangle a target and make movement difficult.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="awt0">
+                    <b>
+                        <y-cell tag="Name" id="7mvq">Dew Mend</y-cell>
+                    </b>
+            (<y-cell tag="School" id="yxz7">Brooklore</y-cell>)
+            Cost: <y-cell tag="Cost" id="k0nh">2</y-cell>,
+            Range: <y-cell tag="Range" id="i16g">Touch</y-cell>,
+            Duration: <y-cell tag="Duration" id="pwod">Instant</y-cell>.
+                    <y-cell tag="Summary" id="36ig">Cool dew and herbal scent close minor wounds and restore 2 Stamina Points.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="327t">
+                    <b>
+                        <y-cell tag="Name" id="i6rr">Gust Hop</y-cell>
+                    </b>
+            (<y-cell tag="School" id="g7xi">Skydance</y-cell>)
+            Cost: <y-cell tag="Cost" id="n7d2">1</y-cell>,
+            Range: <y-cell tag="Range" id="ng3l">Self</y-cell>,
+            Duration: <y-cell tag="Duration" id="7hfj">1 round</y-cell>.
+                    <y-cell tag="Summary" id="f6qa">A swift updraft boosts jumps and lets the caster cross a short gap safely.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="8ona">
+                    <b>
+                        <y-cell tag="Name" id="z6an">Burrow Whisper</y-cell>
+                    </b>
+            (<y-cell tag="School" id="gozz">Stoneecho</y-cell>)
+            Cost: <y-cell tag="Cost" id="ctw9">1</y-cell>,
+            Range: <y-cell tag="Range" id="jgzy">Far</y-cell>,
+            Duration: <y-cell tag="Duration" id="om6m">5 minutes</y-cell>.
+                    <y-cell tag="Summary" id="y3qv">Send a soft voice through roots and tunnels to one known listener.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="q0zt">
+                    <b>
+                        <y-cell tag="Name" id="s5rz">Moonveil</y-cell>
+                    </b>
+            (<y-cell tag="School" id="sgiy">Nightweave</y-cell>)
+            Cost: <y-cell tag="Cost" id="ev7q">2</y-cell>,
+            Range: <y-cell tag="Range" id="8j7s">Near</y-cell>,
+            Duration: <y-cell tag="Duration" id="m6nq">10 minutes</y-cell>.
+                    <y-cell tag="Summary" id="nmek">Shadows gather around an ally, improving stealth and masking scent.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="pwfj">
+                    <b>
+                        <y-cell tag="Name" id="a6if">Acorn Bolt</y-cell>
+                    </b>
+            (<y-cell tag="School" id="mlrz">Oakfire</y-cell>)
+            Cost: <y-cell tag="Cost" id="p70g">2</y-cell>,
+            Range: <y-cell tag="Range" id="tis4">Far</y-cell>,
+            Duration: <y-cell tag="Duration" id="klni">Instant</y-cell>.
+                    <y-cell tag="Summary" id="s48w">Launches a hardened acorn of force that deals 3 damage to one target.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="xjpo">
+                    <b>
+                        <y-cell tag="Name" id="wqz1">Thorn Ward</y-cell>
+                    </b>
+            (<y-cell tag="School" id="6p51">Thorncraft</y-cell>)
+            Cost: <y-cell tag="Cost" id="biv3">2</y-cell>,
+            Range: <y-cell tag="Range" id="ybm2">Touch</y-cell>,
+            Duration: <y-cell tag="Duration" id="kiic">5 minutes</y-cell>.
+                    <y-cell tag="Summary" id="ov2q">A prickling aura grants +1 Resilience to the protected creature.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="2npp">
+                    <b>
+                        <y-cell tag="Name" id="f71d">Scent Trail</y-cell>
+                    </b>
+            (<y-cell tag="School" id="2eqq">Brooklore</y-cell>)
+            Cost: <y-cell tag="Cost" id="4ld7">1</y-cell>,
+            Range: <y-cell tag="Range" id="gkfu">Self</y-cell>,
+            Duration: <y-cell tag="Duration" id="cvii">1 hour</y-cell>.
+                    <y-cell tag="Summary" id="kauz">Marks a route with a chosen scent that allies can easily follow.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="jtpi">
+                    <b>
+                        <y-cell tag="Name" id="6xnt">Root Step</y-cell>
+                    </b>
+            (<y-cell tag="School" id="o49l">Stoneecho</y-cell>)
+            Cost: <y-cell tag="Cost" id="opj1">3</y-cell>,
+            Range: <y-cell tag="Range" id="25ro">Near</y-cell>,
+            Duration: <y-cell tag="Duration" id="f2z2">Instant</y-cell>.
+                    <y-cell tag="Summary" id="2ix7">Step into one tree root and emerge from another within range.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="9e0w">
+                    <b>
+                        <y-cell tag="Name" id="4i34">Ember Nudge</y-cell>
+                    </b>
+            (<y-cell tag="School" id="dj3p">Oakfire</y-cell>)
+            Cost: <y-cell tag="Cost" id="pou9">1</y-cell>,
+            Range: <y-cell tag="Range" id="txc3">Near</y-cell>,
+            Duration: <y-cell tag="Duration" id="fhxb">Instant</y-cell>.
+                    <y-cell tag="Summary" id="tsur">Ignites tinder, warms food, or deals 1 damage to a flammable target.</y-cell>
+                </y-list-item>
+                <y-catalogue id="tt6s">
+                    <y-catalogue-item filter="Spell" label="Spell" id="qsej" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

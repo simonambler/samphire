@@ -1,0 +1,101 @@
+<y-sheet tag="Catalogue" owner="admin" read="everyone" write="" id="ctiv">
+    <y-title id="k9kc">
+        <y-cell id="ypei" tag="Name">Talents</y-cell>
+    </y-title>
+    <y-text id="m1q1" tag="Description">
+        <p>Species-informed talents for woodland characters. Choose one or more to reflect natural strengths and training.</p>
+    </y-text>
+    <y-panel id="da2u">
+        <y-panel-item id="1iu3">
+            <y-list tag="Talents" id="7g4n">
+                <y-list-item tag="Talent" id="wg0w">
+                    <b>
+                        <y-cell tag="Name" id="5b46">Roll Into A Ball</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="6tqy">Defensive</y-cell>)
+                    <y-cell tag="Summary" id="oglk">Hedgehog and porcupine folk can brace to gain +1 Resilience until next turn.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="hnzs">
+                    <b>
+                        <y-cell tag="Name" id="mc6x">Long Ear Alert</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="kfxq">Senses</y-cell>)
+                    <y-cell tag="Summary" id="smtm">Rabbit and hare folk gain advantage when listening for distant danger.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="nlzw">
+                    <b>
+                        <y-cell tag="Name" id="sduv">Silent Glide</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="5k04">Movement</y-cell>)
+                    <y-cell tag="Summary" id="xpvx">Owls and gliders may descend quietly from a perch and ignore fall harm from short drops.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="sj75">
+                    <b>
+                        <y-cell tag="Name" id="lsyf">River Lungs</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="lggo">Survival</y-cell>)
+                    <y-cell tag="Summary" id="nzga">Otter and beaver folk can hold breath longer and resist cold stream penalties.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="92us">
+                    <b>
+                        <y-cell tag="Name" id="is2n">Burrow Dash</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="5917">Movement</y-cell>)
+                    <y-cell tag="Summary" id="5kwd">Badger and mole folk can move quickly through prepared tunnels and loose earth.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="45oh">
+                    <b>
+                        <y-cell tag="Name" id="7dj8">Branchbound</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="a21d">Athletic</y-cell>)
+                    <y-cell tag="Summary" id="t40h">Squirrel folk climb faster and can leap branch to branch with fewer checks.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="ij8g">
+                    <b>
+                        <y-cell tag="Name" id="cf9u">Moonwatch</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="bfbb">Senses</y-cell>)
+                    <y-cell tag="Summary" id="8l8h">Nocturnal species read movement in dim light and reduce night visibility penalties.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="90zi">
+                    <b>
+                        <y-cell tag="Name" id="gl9r">Thick Hide</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="1j44">Defensive</y-cell>)
+                    <y-cell tag="Summary" id="rhj0">Boar and badger folk gain a small passive bonus against blunt damage.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="5suz">
+                    <b>
+                        <y-cell tag="Name" id="ezwo">Dawn Chorus</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="kmc2">Support</y-cell>)
+                    <y-cell tag="Summary" id="00zs">Songbirds can rally nearby allies with a call that boosts morale checks.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="nqmf">
+                    <b>
+                        <y-cell tag="Name" id="i1fm">Whisker Sense</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="bbmk">Senses</y-cell>)
+                    <y-cell tag="Summary" id="m14l">Mouse and rat folk detect tight gaps, vibrations, and nearby movement in darkness.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="996j">
+                    <b>
+                        <y-cell tag="Name" id="dkwt">Foxfire Cunning</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="d0yt">Trickery</y-cell>)
+                    <y-cell tag="Summary" id="nubf">Fox folk excel at feints and misdirection during social tests or skirmishes.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Talent" id="goa0">
+                    <b>
+                        <y-cell tag="Name" id="wom5">Spring Leap</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="le4u">Movement</y-cell>)
+                    <y-cell tag="Summary" id="vr2p">Frog folk can leap twice their height vertically or three times horizontally without a roll, and land silently in water or soft ground.</y-cell>
+                </y-list-item>
+                <y-catalogue id="viav">
+                    <y-catalogue-item filter="Talent" label="Talent" id="sbzk" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

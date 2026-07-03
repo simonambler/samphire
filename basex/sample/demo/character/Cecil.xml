@@ -1,0 +1,186 @@
+<y-sheet tag="Character" owner="admin" read="everyone" write="" id="xes9">
+    <y-title id="ki1j">
+        <y-cell id="pvl6" tag="Name">Reverend Cecil</y-cell>
+    </y-title>
+    <y-text id="jtrl" tag="Description">
+        <p>Reverend Cecil is a stout mole cleric from the deep-root parish of Mossburrow, tending to the spiritual and medicinal needs of the burrow communities with patient paws and a gentle voice.</p>
+    </y-text>
+    <y-panel id="2dlh">
+        <y-panel-item id="gfb6">
+            <y-array id="394f">
+                <y-array-item id="zvs3" label="Species">
+                    <y-cell id="muls" tag="Species">Mole</y-cell>
+                </y-array-item>
+                <y-array-item id="iteh" label="Calling">
+                    <y-cell id="ehl7" tag="Calling">Cleric</y-cell>
+                </y-array-item>
+                <y-array-item id="ehjy" label="Home">
+                    <y-cell id="nwi4" tag="Home">Mossburrow</y-cell>
+                </y-array-item>
+                <y-array-item id="yd57" label="Season">
+                    <y-cell id="m4ck" tag="Season">Summerwise</y-cell>
+                </y-array-item>
+                <y-array-item id="pe86" label="Player">
+                    <y-cell id="cv9s" tag="Player">Demo</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="7ymt">
+            <y-array id="jlvr">
+                <y-array-item id="4krc" label="Brawn">
+                    <y-cell id="b49x" tag="Brawn">8</y-cell>
+                </y-array-item>
+                <y-array-item id="dv4o" label="Quickness">
+                    <y-cell id="lkp5" tag="Quickness">5</y-cell>
+                </y-array-item>
+                <y-array-item id="jwf2" label="Wits">
+                    <y-cell id="xocc" tag="Wits">9</y-cell>
+                </y-array-item>
+                <y-array-item id="mqve" label="Heart">
+                    <y-cell id="xop1" tag="Heart">12</y-cell>
+                </y-array-item>
+                <y-array-item id="vxv3" label="Luck">
+                    <y-cell id="ewti" tag="Luck">7</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="o9sj">
+            <y-array id="iz46">
+                <y-array-item id="l4vg" label="Resilience">
+                    <y-cell id="5fir" tag="Resilience">9</y-cell>
+                </y-array-item>
+                <y-array-item id="9d2v" label="Stamina Points">
+                    <y-cell id="0qkv" tag="StaminaPoints">14</y-cell>
+                </y-array-item>
+                <y-array-item id="nkh3" label="Spell Points">
+                    <y-cell id="ppm1" tag="SpellPoints">8</y-cell>
+                </y-array-item>
+                <y-array-item id="0q84" label="Seed Coins">
+                    <y-cell id="vk20" tag="SeedCoins">9</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="ia9b">
+        <y-panel-item id="j639">
+            <h3>Background</h3>
+            <y-text id="tv1y">
+                <p>Cecil has served the burrow parishes of Mossburrow for two decades, ministering to the sick, settling boundary disputes, and keeping the old root-rites alive. He is slow to anger, quick to listen, and surprisingly handy with his oak staff when weasels come calling.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="l32n">
+        <y-panel-item id="8kas">
+            <h3>Skills</h3>
+            <y-list tag="Skills" id="5zh2">
+                <y-list-item tag="Skill" id="i60r">
+                    <b><y-cell tag="Name" id="xu8s">Speak Kindly</y-cell></b>
+                    (<y-cell tag="Stat" id="zgxh">Heart</y-cell>)
+                    <y-cell tag="Level" id="754q">13</y-cell>.
+                    <y-cell tag="Summary" id="bmbw">Calm troubled souls, mediate disputes, and earn trust across species.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="exig">
+                    <b><y-cell tag="Name" id="n1er">Herblore</y-cell></b>
+                    (<y-cell tag="Stat" id="qa5v">Wits</y-cell>)
+                    <y-cell tag="Level" id="kfzd">11</y-cell>.
+                    <y-cell tag="Summary" id="hfnr">Prepare healing poultices, identify ailments, and tend the wounded.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Skill" id="93o0">
+                    <b><y-cell tag="Name" id="bitz">Burrowcraft</y-cell></b>
+                    (<y-cell tag="Stat" id="s302">Brawn</y-cell>)
+                    <y-cell tag="Level" id="3pbw">9</y-cell>.
+                    <y-cell tag="Summary" id="y7x7">Shape and shore up tunnels, dig new passages, and find safe routes underground.</y-cell>
+                </y-list-item>
+                <y-catalogue id="6ea1">
+                    <y-catalogue-item filter="Skill" label="Skill" id="pt72" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="fthj">
+        <y-panel-item id="ju7m">
+            <h3>Talents</h3>
+            <y-list tag="Talents" id="3eso">
+                <y-list-item tag="Talent" id="8bb5">
+                    <b><y-cell tag="Name" id="q08y">Burrow Dash</y-cell></b>
+                    (<y-cell tag="Type" id="6ntn">Movement</y-cell>)
+                    <y-cell tag="Summary" id="xj6f">Cecil moves quickly through prepared tunnels and can retreat underground as a swift action.</y-cell>
+                </y-list-item>
+                <y-catalogue id="omx0">
+                    <y-catalogue-item filter="Talent" label="Talent" id="gzvv" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="ymcn">
+        <y-panel-item id="zz5m">
+            <h3>Spells</h3>
+            <y-list tag="Spells" id="e2bm">
+                <y-list-item tag="Spell" id="mqo8">
+                    <b><y-cell tag="Name" id="tc6x">Dew Mend</y-cell></b>
+                    (<y-cell tag="School" id="r70h">Brooklore</y-cell>)
+                    Cost: <y-cell tag="Cost" id="7imf">2</y-cell>,
+                    Range: <y-cell tag="Range" id="j7ka">Touch</y-cell>,
+                    Duration: <y-cell tag="Duration" id="r8w6">Instant</y-cell>.
+                    <y-cell tag="Summary" id="at8m">Cool dew and herbal scent close minor wounds and restore 2 Stamina Points.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="28ck">
+                    <b><y-cell tag="Name" id="8wo9">Thorn Ward</y-cell></b>
+                    (<y-cell tag="School" id="ohy7">Thorncraft</y-cell>)
+                    Cost: <y-cell tag="Cost" id="g51l">2</y-cell>,
+                    Range: <y-cell tag="Range" id="g09l">Touch</y-cell>,
+                    Duration: <y-cell tag="Duration" id="h2up">5 minutes</y-cell>.
+                    <y-cell tag="Summary" id="47qy">A prickling aura grants +1 Resilience to the protected creature.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Spell" id="pbi5">
+                    <b><y-cell tag="Name" id="ajbp">Burrow Whisper</y-cell></b>
+                    (<y-cell tag="School" id="nyzy">Stoneecho</y-cell>)
+                    Cost: <y-cell tag="Cost" id="usbf">1</y-cell>,
+                    Range: <y-cell tag="Range" id="hgsy">Far</y-cell>,
+                    Duration: <y-cell tag="Duration" id="dxee">5 minutes</y-cell>.
+                    <y-cell tag="Summary" id="r5v1">Send a soft voice through roots and tunnels to one known listener.</y-cell>
+                </y-list-item>
+                <y-catalogue id="rucg">
+                    <y-catalogue-item filter="Spell" label="Spell" id="2bw9" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="9g8t">
+        <y-panel-item id="7baf">
+            <h3>Gear</h3>
+            <y-list tag="Gear" id="gf2a">
+                <y-list-item tag="Weapon" id="iwmd">
+                    <b><y-cell tag="Name" id="aggc">Oak Staff</y-cell></b>
+                    (<y-cell tag="Category" id="u8j5">Melee</y-cell>)
+                    <y-cell tag="Damage" id="tnjb">d6+d4</y-cell>,
+                    Reach: <y-cell tag="Reach" id="xt76">1</y-cell>,
+                    Hands: <y-cell tag="Hands" id="8n4w">2</y-cell>,
+                    <y-cell tag="Notes" id="ypp7">A gnarled staff carved with parish sigils, as much symbol as weapon.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="nz25">
+                    <b><y-cell tag="Name" id="gimu">Incense Bundle</y-cell></b>
+                    (<y-cell tag="Type" id="p6y5">Ritual</y-cell>)
+                    <y-cell tag="Summary" id="atwx">Dried herbs and bark bound in twine; burned during blessings, rites, and healing ceremonies.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="0dna">
+                    <b><y-cell tag="Name" id="zt0r">Herb Wrap Kit</y-cell></b>
+                    (<y-cell tag="Type" id="kkt4">Medicine</y-cell>)
+                    <y-cell tag="Summary" id="40l2">Bandages, crushed leaves, and salve for first aid on the trail.</y-cell>
+                </y-list-item>
+                <y-catalogue id="zozk">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="kq2j" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                    <y-catalogue-item filter="Item" label="Item" id="4wfe" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+    <y-panel id="i93k">
+        <y-panel-item id="0mfr">
+            <h3>Notes</h3>
+            <y-text id="8xnf">
+                <p>Reverend Cecil is intended as a copyright-safe example character for the fictional woodland game used in the Samphire demo database.</p>
+            </y-text>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>

@@ -1,0 +1,108 @@
+<y-sheet tag="Catalogue" owner="admin" read="everyone" write="" id="uylo">
+    <y-title id="u4t5">
+        <y-cell id="gwqa" tag="Name">Items</y-cell>
+    </y-title>
+    <y-text id="ye6u" tag="Description">
+        <p>Common tools and supplies for travel, camp life, and correspondence in the woodland setting.</p>
+    </y-text>
+    <y-panel id="dfmf">
+        <y-panel-item id="vb3e">
+            <y-list tag="Gear" id="gmx4">
+                <y-list-item tag="Item" id="55fl">
+                    <b>
+                        <y-cell tag="Name" id="0a6h">Messenger Satchel</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="bqm5">Travel Gear</y-cell>)
+                    <y-cell tag="Summary" id="o622">Waxed-leaf pouch for letters, route maps, and sealing twine.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="ucom">
+                    <b>
+                        <y-cell tag="Name" id="6ps5">Moss Bedroll</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="hkxh">Camp Gear</y-cell>)
+                    <y-cell tag="Summary" id="9okl">Soft insulated roll that helps recover from cold nights in the field.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="rf50">
+                    <b>
+                        <y-cell tag="Name" id="oe1m">Sap Lantern</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="tuni">Light Source</y-cell>)
+                    <y-cell tag="Summary" id="1wek">Jar lamp with slow-burning pine sap and a shutter for dimming.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="wqd6">
+                    <b>
+                        <y-cell tag="Name" id="ba41">Herb Wrap Kit</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="5i8p">Medicine</y-cell>)
+                    <y-cell tag="Summary" id="novt">Bandages, crushed leaves, and salve for first aid on the trail.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="5oft">
+                    <b>
+                        <y-cell tag="Name" id="60k8">Rootline Map</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="wy3w">Navigation</y-cell>)
+                    <y-cell tag="Summary" id="9yt8">Hand-drawn network of tunnels, hollow logs, and safe stream crossings.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="8gd1">
+                    <b>
+                        <y-cell tag="Name" id="tbrr">Seedcoin Purse</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="0qdz">Currency</y-cell>)
+                    <y-cell tag="Summary" id="jlt6">Knotted bark pouch sized for carrying seed coins and charm tokens.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="x8rv">
+                    <b>
+                        <y-cell tag="Name" id="skpf">Cattail Cloak</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="cf4w">Clothing</y-cell>)
+                    <y-cell tag="Summary" id="lktl">Water-resistant cloak woven from reed fibers for marsh travel.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="vn2c">
+                    <b>
+                        <y-cell tag="Name" id="64af">Trail Chalk</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="2ufx">Utility</y-cell>)
+                    <y-cell tag="Summary" id="f0ow">Colored chalk pebbles used to mark safe routes and warning signs.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="4gor">
+                    <b>
+                        <y-cell tag="Name" id="u6ia">Nutcracker Tool</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="55j3">Utility</y-cell>)
+                    <y-cell tag="Summary" id="603p">Small lever tool for cracking shells, prying lids, and light repairs.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="m1gb">
+                    <b>
+                        <y-cell tag="Name" id="268r">Rainleaf Tarp</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="sjhn">Camp Gear</y-cell>)
+                    <y-cell tag="Summary" id="jjv1">Large stitched leaves treated with resin to make quick shelters.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="c588">
+                    <b>
+                        <y-cell tag="Name" id="mol2">Feather Quill Set</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="7a3u">Writing</y-cell>)
+                    <y-cell tag="Summary" id="ym0z">Ink, sharpened quills, and bark-paper slips for messages and records.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="grrf">
+                    <b>
+                        <y-cell tag="Name" id="tnaz">Incense Bundle</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="ew8h">Ritual</y-cell>)
+                    <y-cell tag="Summary" id="i5gy">Dried herbs and bark bound in twine; burned during blessings, rites, and healing ceremonies.</y-cell>
+                </y-list-item>
+                <y-list-item tag="Item" id="cf7i">
+                    <b>
+                        <y-cell tag="Name" id="ilmx">Conjurer's Pouch</y-cell>
+                    </b>
+            (<y-cell tag="Type" id="pc7f">Performance</y-cell>)
+                    <y-cell tag="Summary" id="ot8k">Deep-pocketed bag holding scarves, tokens, mirror shards, and small props for stage illusions and sleight-of-hand tricks.</y-cell>
+                </y-list-item>
+                <y-catalogue id="jh9a">
+                    <y-catalogue-item filter="Item" label="Item" id="ziys" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                </y-catalogue>
+            </y-list>
+        </y-panel-item>
+    </y-panel>
+</y-sheet>
