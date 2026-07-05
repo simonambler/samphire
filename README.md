@@ -118,7 +118,7 @@ The container starts in the background. Wait a few seconds for Jetty to initiali
 Open your browser and navigate to:
 
 ```
-https://<host>:8443/samphire/
+https://<host>:8443/samphire/home
 ```
 
 Replace `<host>` with `localhost` if you are on the same machine as the container, or with the server's LAN IP or public hostname for remote access.
