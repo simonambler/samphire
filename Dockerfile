@@ -60,6 +60,9 @@ ADD --chown=jetty:jetty \
 RUN cd $JETTY_BASE/basex/deploy/${BASEX_APP_DIR} && \
     unzip $TMPDIR/basex/${BASEX_APP_DIR}.war
 
+# Link tagsoup.jar to BaseX lib directory so BaseX can use it for HTML parsing.
+RUN ln -s /usr/share/java/tagsoup.jar $JETTY_BASE/basex/deploy/${BASEX_APP_DIR}/WEB-INF/lib/tagsoup.jar
+
 # Enable modules required for deploying BaseX as a web application.
 RUN java -jar "$JETTY_HOME/start.jar" --add-modules=server,http,ssl,https,ee9-deploy,ee9-webapp,ee9-websocket-jetty
 
