@@ -1,3 +1,6 @@
 .DS_Store
 tmp/
 **/samphire.zip
+
+# Vite cache
+/vue/.vite/
