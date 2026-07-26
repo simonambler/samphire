@@ -29,6 +29,7 @@ import YPanelItem from './components/YPanelItem.vue'
 import YSheet from './components/YSheet.vue'
 import YStyle from './components/YStyle.vue'
 import YSummary from './components/YSummary.vue'
+import YTally from './components/YTally.vue'
 import YText from './components/YText.vue'
 import YTitle from './components/YTitle.vue'
 
@@ -47,6 +48,7 @@ app.component('y-panel-item', YPanelItem)
 app.component('y-panel', YPanel)
 app.component('y-sheet', YSheet)
 app.component('y-summary', YSummary)
+app.component('y-tally', YTally)
 app.component('y-text', YText)
 app.component('y-title', YTitle)
 app.component('y-style', YStyle)
