@@ -17,7 +17,13 @@
 -->
 
 <template>
-  <span :id="id" class="y-tally" :aria-readonly="readonly ? 'true' : 'false'">
+  <span
+    :id="id"
+    class="y-tally"
+    :aria-readonly="readonly ? 'true' : 'false'"
+    :tabindex="readonly ? -1 : 0"
+    @keydown="handleKeydown"
+  >
     <span v-if="!isInitialized" ref="sourceEl" class="y-tally-source"><slot></slot></span>
     <button
       v-for="index in boxCount"
@@ -30,7 +36,6 @@
     >
       <font-awesome-icon :icon="iconFor(index)" />
     </button>
-    <span class="y-tally-value">{{ currentValue }}</span>
   </span>
 </template>
 
@@ -53,7 +58,7 @@
     max: {
       type: [Number, String],
       required: false,
-      default: 0
+      default: 1
     }
   });
 
@@ -77,35 +82,24 @@
     return Math.max(0, toInt(props.max, 0));
   });
 
-  const toggle = (index) => {
-    if (readonly || pending.value) {
-      return;
-    }
-
+  const updateValue = (newValue) => {
     const fromValue = currentValue.value;
-    const wasFilled = index <= fromValue;
-    const nextValue = wasFilled ? index - 1 : index;
-    const boundedValue = clamp(nextValue, 0, boxCount.value);
-    const direction = wasFilled ? 'down' : 'up';
-
-    if (boundedValue === fromValue) {
-      return;
-    }
+    const direction = newValue > fromValue ? 'up' : 'down';
 
     pendingTransition.value = {
       direction,
       from: fromValue,
-      to: boundedValue
+      to: newValue
     };
-    currentValue.value = boundedValue;
+    currentValue.value = newValue;
     pending.value = true;
 
     postit(
       `./edit/${props.id}`,
       {},
-      String(boundedValue),
+      String(newValue),
       () => {
-        savedValue.value = boundedValue;
+        savedValue.value = newValue;
       },
       () => {
         currentValue.value = savedValue.value;
@@ -115,6 +109,47 @@
         pending.value = false;
       }
     );
+  };
+
+  const toggle = (index) => {
+    if (readonly || pending.value) {
+      return;
+    }
+
+    const fromValue = currentValue.value;
+    const wasFilled = index <= fromValue;
+    const nextValue = wasFilled ? index - 1 : index;
+    const boundedValue = clamp(nextValue, 0, boxCount.value);
+
+    if (boundedValue === fromValue) {
+      return;
+    }
+
+    updateValue(boundedValue);
+  };
+
+  const handleKeydown = (event) => {
+    if (readonly || pending.value) {
+      return;
+    }
+
+    const isLetter = event.key.length === 1 && /[a-zA-Z]/.test(event.key);
+    let nextValue = null;
+
+    if (['ArrowUp', 'ArrowRight', '+', '='].includes(event.key) || isLetter) {
+      nextValue = Math.min(currentValue.value + 1, boxCount.value);
+      event.preventDefault();
+    } else if (['ArrowDown', 'ArrowLeft', '-', '_', ' ', 'Backspace'].includes(event.key)) {
+      nextValue = Math.max(currentValue.value - 1, 0);
+      event.preventDefault();
+    } else if (event.key === 'Escape') {
+      event.currentTarget.blur();
+      return;
+    }
+
+    if (nextValue !== null && nextValue !== currentValue.value) {
+      updateValue(nextValue);
+    }
   };
 
   const iconFor = (index) => {
@@ -171,18 +206,6 @@
   .y-tally-box:disabled {
     cursor: default;
     opacity: 0.8;
-  }
-
-  .y-tally-value {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
   }
 
 }

@@ -218,6 +218,23 @@ YText supports emphasis, headings, lists, paragraph/horizontal-rule blocks, undo
 | Structure | Horizontal rule |
 | History | Undo, Redo |
 
+### Tally
+
+A **tally** is a series of checkboxes used to record a count or tracked value from 0 to a specified maximum.
+
+Tallies are useful for tracking resources with a fixed upper bound — such as ammunition, or special abilities that recharge. With `max=1`, a tally becomes a simple checkbox.
+
+> To use a tally:
+>
+>   - Click a box in the series to toggle its state.
+>   - Filling: clicking on an empty box fills it and all boxes to its left, incrementing the count to that position.
+>   - Emptying: clicking on a filled box empties it and all boxes to its right, decrementing the count to one less than that position.
+>   - **Keyboard shortcuts** (when the tally is focused):
+>     - **Up/Right arrow**, **+**, **=**, or any **letter key** — increment the count by 1
+>     - **Down/Left arrow**, **-**, **_**, **Space**, or **Backspace** — decrement the count by 1
+>     - Tallies auto-save to the database; updates revert if the save fails; caret marks indicate a save pending.
+
+
 ### List and Catalogue
 
 A **list** is an ordered collection of items.  A **catalogue** is a curated collection of items that may be added to a list.  
@@ -267,6 +284,7 @@ Authoring a Samphire sheet means writing an XML document whose structure defines
 | y-array | Compact stat-block container for paired values (for example attributes, derived stats, or tracked resources). Direct children must be `y-array-item` elements. | Rendered as a two-column CSS grid (`div.y-array`) sized to content, with alternating alignment so labels sit on the left and values on the right. | `id` (not currently used). |
 | y-array-item | One label/value entry within a `y-array`; defines the display label and wraps the associated field or value content. | Rendered as two inline spans: a label span showing `label:` followed by a value span containing the item content. | `label` (required), `id` (not currently used). |
 | y-cell | Inline editable value field for short text data (for example numbers, names, or brief notes) inside any sheet section. | Rendered as an inline `span.y-cell`; when writable, users edit in place and press Enter or Tab to submit, with updates posted immediately and content reverted if submit fails (or if edit is canceled). | `id` (required for writable behavior; when absent the cell is read-only). |
+| y-tally | Series of checkboxes representing an integer value from 0 to a maximum, used to track counts, resources, or limited abilities. Clicking a box toggles its state: filling it and all boxes to the left, or emptying it and all boxes to the right. | Rendered as a series of box icons (`span.y-tally`) with keyboard and mouse interactivity; each click updates the value and posts to the database, with updates reverting if the save fails and a visual transition indicator shown during update. Keyboard shortcuts (when focused): Up/Right arrow, +, =, or any letter key to increment; Down/Left arrow, -, _, Space, or Backspace to decrement. | `id` (required for writable behavior; when absent the tally is read-only), `max` (optional, specifies the number of boxes in the series; default is 1). |
 | y-text | Rich-text content area for longer prose (for example background notes, session logs, or free-form descriptions) with inline formatting controls. | Rendered as a TipTap editor block with a focus-sensitive toolbar (bold, italic, underline, headings, lists, undo/redo, save); content is persisted only when the Save button is clicked, and failed saves revert to the last saved version. | `id` (required for writable behavior; when absent the editor is read-only). |
 | y-list | Container for heterogeneous collections (for example Gear, Spells, Contacts) where items can have different internal layouts but share one logical list. Direct children must be `y-list-item` elements, with an optional final `y-catalogue` child for add-from-catalogue sources. | Rendered as a block list (`div.y-list`) with list controls; writable lists support drag-and-drop reordering plus selection mode for multi-item delete, while read-only lists show content without edit controls. | `id` (required for writable list operations), `tag` (optional grouping key used by drag-and-drop behavior). |
 | y-list-item | One entry row within a `y-list`, wrapping the item's visible fields and semantics (for example one weapon, one spell, or one linked sheet summary). | Rendered as a block row (`div.y-list-item`) with either a drag handle (normal mode) or a checkbox (selection mode), followed by the item content. | `id` (required for reliable selection/delete operations). |
