@@ -22,6 +22,8 @@ import YArrayItem from './components/YArrayItem.vue'
 import YCatalogue from './components/YCatalogue.vue'
 import YCatalogueItem from './components/YCatalogueItem.vue'
 import YCell from './components/YCell.vue'
+import YImage from './components/YImage.vue'
+import YImageContent from './components/YImageContent.vue'
 import YList from './components/YList.vue'
 import YListItem from './components/YListItem.vue'
 import YPanel from './components/YPanel.vue'
@@ -42,16 +44,18 @@ app.component('y-array', YArray)
 app.component('y-catalogue-item', YCatalogueItem)
 app.component('y-catalogue', YCatalogue)
 app.component('y-cell', YCell)
+app.component('y-image-content', YImageContent)
+app.component('y-image', YImage)
 app.component('y-list-item', YListItem)
 app.component('y-list', YList)
 app.component('y-panel-item', YPanelItem)
 app.component('y-panel', YPanel)
 app.component('y-sheet', YSheet)
+app.component('y-style', YStyle)
 app.component('y-summary', YSummary)
 app.component('y-tally', YTally)
 app.component('y-text', YText)
 app.component('y-title', YTitle)
-app.component('y-style', YStyle)
 app.mount('#app')
 
 const appEl = document.getElementById('app')
