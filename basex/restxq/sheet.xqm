@@ -23,6 +23,7 @@ declare namespace output = 'http://www.w3.org/2010/xslt-xquery-serialization';
 declare namespace http = 'http://expath.org/ns/http-client';
 
 import module namespace ids = "http://www.jsodium.org/samphire/ids" at "ids.xqm";
+import module namespace image = "http://www.jsodium.org/samphire/image" at "image.xqm";
 import module namespace login = "http://www.jsodium.org/samphire/login" at "login.xqm";
 import module namespace summary = "http://www.jsodium.org/samphire/summary" at "summary.xqm";
 import module namespace session = 'http://basex.org/modules/session';
@@ -79,7 +80,13 @@ declare
   function sheet:delete-sheet($database as xs:string, $type as xs:string, $document as xs:string) as empty-sequence()
   {
     let $path := concat($type, '/', $document, '.xml')
-    return db:delete($database, $path)
+    let $sheet := if (doc-available(concat($database, '/', $path))) then doc(concat($database, '/', $path))/y-sheet else ()
+    let $uuids := distinct-values($sheet//y-image-content/@uuid/string())
+    return (
+      for $uuid in $uuids
+      return image:check-delete($database, $uuid),
+      db:delete($database, $path)
+    )
   };
 
 declare

@@ -119,6 +119,18 @@ declare function image:file-binary($file as item()?) as xs:base64Binary? {
             return $binary)[1]
 };
 
+declare %updating function image:check-delete($database as xs:string, $uuid as xs:string) as empty-sequence() {
+  let $refs := count(
+    collection($database)//y-image-content[@uuid = $uuid]
+  )
+  let $resourcePath := concat('__media__/', $uuid)
+  return
+    if ($refs le 1 and db:exists($database, $resourcePath)) then
+      db:delete($database, $resourcePath)
+    else
+      ()
+};
+
 declare
   %updating
   %rest:path("/samphire/data/{$database}/type/{$type}/sheet/{$document}/image/{$id}")
@@ -163,7 +175,7 @@ declare
               />
             return (
               if ($oldUuid != '') then
-                db:delete($database, concat('__media__/', $oldUuid))
+                image:check-delete($database, $oldUuid)
               else
                 (),
               db:put-binary($database, $binary, concat('__media__/', $uuid)),
