@@ -253,7 +253,7 @@ declare
     let $types := distinct-values(
       for $path in db:list($database)
       let $parts := tokenize($path, '/')
-      where count($parts) = 2
+      where count($parts) = 2 and $parts[1] ne '__media__'
       return $parts[1]
     )
     let $links :=
