@@ -60,6 +60,11 @@
                 </y-array-item>
             </y-array>
         </y-panel-item>
+        <y-panel-item id="s80h">
+            <y-image id="n93q" width="200" height="250">
+                <y-image-content id="k5qh" height="250" width="200" uuid="7BD2688B-AE56-447A-B510-615D300AA1AA" filename="Freida.png" content-type="image/png" src="./media/7BD2688B-AE56-447A-B510-615D300AA1AA"/>
+            </y-image>
+        </y-panel-item>
     </y-panel>
     <y-panel id="xeqg">
         <y-panel-item id="u31a">

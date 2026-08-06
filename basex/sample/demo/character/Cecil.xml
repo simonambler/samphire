@@ -60,6 +60,11 @@
                 </y-array-item>
             </y-array>
         </y-panel-item>
+        <y-panel-item id="9mij">
+            <y-image id="ihg2" width="200" height="250">
+                <y-image-content id="73yh" height="250" width="200" uuid="F61F979F-1F69-4804-95FF-249B727F51AC" filename="Cecil.png" content-type="image/png" src="./media/F61F979F-1F69-4804-95FF-249B727F51AC"/>
+            </y-image>
+        </y-panel-item>
     </y-panel>
     <y-panel id="ia9b">
         <y-panel-item id="j639">

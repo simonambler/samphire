@@ -60,6 +60,11 @@
                 </y-array-item>
             </y-array>
         </y-panel-item>
+        <y-panel-item id="j292">
+            <y-image id="q44n" width="200" height="250">
+                <y-image-content id="2toj" height="250" width="200" uuid="3E5842CF-620A-43E5-A7A8-ADEF23A85D53" filename="Jan.png" content-type="image/png" src="./media/3E5842CF-620A-43E5-A7A8-ADEF23A85D53"/>
+            </y-image>
+        </y-panel-item>
     </y-panel>
     <y-panel id="r1wr">
         <y-panel-item id="krid">

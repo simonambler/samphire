@@ -1,192 +1,197 @@
-<y-sheet tag="Character" owner="admin" read="everyone" write="" id="85lq">
-    <y-title id="snbs">
-        <y-cell id="v37o" tag="Name">Melony</y-cell>
+<y-sheet owner="admin" tag="Character" read="everyone" write="" id="834h">
+    <y-title id="54m7">
+        <y-cell id="y9nn" tag="Name">Melony</y-cell>
     </y-title>
-    <y-text id="l6sg" tag="Description">
+    <y-text id="bbuo" tag="Description">
         <p>Melony is a travelling frog magician from the reed-fens east of Fernwater Hollow, known for her dazzling stage shows, inexplicable coin tricks, and an uncanny habit of arriving exactly when she is needed.</p>
     </y-text>
-    <y-panel id="62yz">
-        <y-panel-item id="v5za">
-            <y-array id="87c9">
-                <y-array-item id="j8aa" label="Species">
-                    <y-cell id="4fah" tag="Species">Frog</y-cell>
+    <y-panel id="tst1">
+        <y-panel-item id="3i5f">
+            <y-array id="op4u">
+                <y-array-item id="sa5f" label="Species">
+                    <y-cell id="zgck" tag="Species">Frog</y-cell>
                 </y-array-item>
-                <y-array-item id="feo9" label="Calling">
-                    <y-cell id="wxob" tag="Calling">Magician</y-cell>
+                <y-array-item id="hdkr" label="Calling">
+                    <y-cell id="4y59" tag="Calling">Magician</y-cell>
                 </y-array-item>
-                <y-array-item id="413s" label="Home">
-                    <y-cell id="y6yr" tag="Home">Reed-Fen Crossing</y-cell>
+                <y-array-item id="4zxa" label="Home">
+                    <y-cell id="mh0j" tag="Home">Reed-Fen Crossing</y-cell>
                 </y-array-item>
-                <y-array-item id="oqeo" label="Season">
-                    <y-cell id="nbko" tag="Season">Springling</y-cell>
+                <y-array-item id="s9wd" label="Season">
+                    <y-cell id="h441" tag="Season">Springling</y-cell>
                 </y-array-item>
-                <y-array-item id="3zae" label="Player">
-                    <y-cell id="chbj" tag="Player">Demo</y-cell>
-                </y-array-item>
-            </y-array>
-        </y-panel-item>
-        <y-panel-item id="def2">
-            <y-array id="p4h1">
-                <y-array-item id="m2n0" label="Brawn">
-                    <y-cell id="qfxb" tag="Brawn">4</y-cell>
-                </y-array-item>
-                <y-array-item id="3f09" label="Quickness">
-                    <y-cell id="snpq" tag="Quickness">8</y-cell>
-                </y-array-item>
-                <y-array-item id="e485" label="Wits">
-                    <y-cell id="xook" tag="Wits">11</y-cell>
-                </y-array-item>
-                <y-array-item id="6i5l" label="Heart">
-                    <y-cell id="g0xo" tag="Heart">10</y-cell>
-                </y-array-item>
-                <y-array-item id="egq4" label="Luck">
-                    <y-cell id="tsqb" tag="Luck">12</y-cell>
+                <y-array-item id="k4cm" label="Player">
+                    <y-cell id="61hb" tag="Player">Demo</y-cell>
                 </y-array-item>
             </y-array>
         </y-panel-item>
-        <y-panel-item id="03o2">
-            <y-array id="jpmy">
-                <y-array-item id="qubk" label="Resilience">
-                    <y-cell id="yy58" tag="Resilience">6</y-cell>
+        <y-panel-item id="oy2g">
+            <y-array id="9jxe">
+                <y-array-item id="s2x3" label="Brawn">
+                    <y-cell id="zb8p" tag="Brawn">4</y-cell>
                 </y-array-item>
-                <y-array-item id="j7lw" label="Stamina Points">
-                    <y-cell id="mbv8" tag="StaminaPoints">9</y-cell>
+                <y-array-item id="9hnx" label="Quickness">
+                    <y-cell id="qm0y" tag="Quickness">8</y-cell>
                 </y-array-item>
-                <y-array-item id="6g7l" label="Spell Points">
-                    <y-cell id="cjhm" tag="SpellPoints">10</y-cell>
+                <y-array-item id="ejhu" label="Wits">
+                    <y-cell id="3oga" tag="Wits">11</y-cell>
                 </y-array-item>
-                <y-array-item id="9l0i" label="Seed Coins">
-                    <y-cell id="4tcd" tag="SeedCoins">18</y-cell>
+                <y-array-item id="jfrt" label="Heart">
+                    <y-cell id="e2ca" tag="Heart">10</y-cell>
+                </y-array-item>
+                <y-array-item id="1qjz" label="Luck">
+                    <y-cell id="l9s5" tag="Luck">12</y-cell>
                 </y-array-item>
             </y-array>
+        </y-panel-item>
+        <y-panel-item id="vneg">
+            <y-array id="rbdl">
+                <y-array-item id="g7x0" label="Resilience">
+                    <y-cell id="951d" tag="Resilience">6</y-cell>
+                </y-array-item>
+                <y-array-item id="j3pk" label="Stamina Points">
+                    <y-cell id="2gh9" tag="StaminaPoints">9</y-cell>
+                </y-array-item>
+                <y-array-item id="hgug" label="Spell Points">
+                    <y-cell id="q8e3" tag="SpellPoints">10</y-cell>
+                </y-array-item>
+                <y-array-item id="kttr" label="Seed Coins">
+                    <y-cell id="h3lm" tag="SeedCoins">18</y-cell>
+                </y-array-item>
+            </y-array>
+        </y-panel-item>
+        <y-panel-item id="j6nq">
+            <y-image id="bifx" width="200" height="250">
+                <y-image-content id="okx7" height="250" width="200" uuid="FDB4A847-148F-44DA-91FC-9936914C5735" filename="Melony.png" content-type="image/png" src="./media/FDB4A847-148F-44DA-91FC-9936914C5735"/>
+            </y-image>
         </y-panel-item>
     </y-panel>
-    <y-panel id="itgc">
-        <y-panel-item id="11e1">
+    <y-panel id="cvc3">
+        <y-panel-item id="662z">
             <h3>Background</h3>
-            <y-text id="p0t9">
+            <y-text id="am5i">
                 <p>Melony travels the fen roads performing at market days and harvest festivals, trading wonder for warm meals and a dry corner to sleep in. Her magic is real — she just prefers that people aren't quite sure which parts.</p>
             </y-text>
         </y-panel-item>
     </y-panel>
-    <y-panel id="scm9">
-        <y-panel-item id="b7jk">
+    <y-panel id="k44q">
+        <y-panel-item id="qr32">
             <h3>Skills</h3>
-            <y-list tag="Skills" id="n5mk">
-                <y-list-item tag="Skill" id="ydy5">
-                    <b><y-cell tag="Name" id="pqa2">Nightsong</y-cell></b>
-                    (<y-cell tag="Stat" id="nfep">Heart</y-cell>)
-                    <y-cell tag="Level" id="bkkd">11</y-cell>.
-                    <y-cell tag="Summary" id="vh7f">Captivate an audience with ribbiting calls and haunting stage melodies.</y-cell>
+            <y-list tag="Skills" id="7x0e">
+                <y-list-item tag="Skill" id="esjl">
+                    <b><y-cell tag="Name" id="7ofu">Nightsong</y-cell></b>
+                    (<y-cell tag="Stat" id="nmbq">Heart</y-cell>)
+                    <y-cell tag="Level" id="u16i">11</y-cell>.
+                    <y-cell tag="Summary" id="6g1e">Captivate an audience with ribbiting calls and haunting stage melodies.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Skill" id="92yr">
-                    <b><y-cell tag="Name" id="uc5d">Speak Kindly</y-cell></b>
-                    (<y-cell tag="Stat" id="y0gz">Heart</y-cell>)
-                    <y-cell tag="Level" id="zoy7">10</y-cell>.
-                    <y-cell tag="Summary" id="vzt1">Disarm a hostile crowd and make strangers feel immediately at ease.</y-cell>
+                <y-list-item tag="Skill" id="y4g0">
+                    <b><y-cell tag="Name" id="2234">Speak Kindly</y-cell></b>
+                    (<y-cell tag="Stat" id="r9is">Heart</y-cell>)
+                    <y-cell tag="Level" id="4x2n">10</y-cell>.
+                    <y-cell tag="Summary" id="ugqb">Disarm a hostile crowd and make strangers feel immediately at ease.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Skill" id="awqz">
-                    <b><y-cell tag="Name" id="ubs4">Watchfulness</y-cell></b>
-                    (<y-cell tag="Stat" id="093g">Wits</y-cell>)
-                    <y-cell tag="Level" id="uc33">10</y-cell>.
-                    <y-cell tag="Summary" id="scbh">Read a room, spot a mark, and notice when something is about to go wrong.</y-cell>
+                <y-list-item tag="Skill" id="w3v7">
+                    <b><y-cell tag="Name" id="yu2f">Watchfulness</y-cell></b>
+                    (<y-cell tag="Stat" id="fno5">Wits</y-cell>)
+                    <y-cell tag="Level" id="7qle">10</y-cell>.
+                    <y-cell tag="Summary" id="mpn6">Read a room, spot a mark, and notice when something is about to go wrong.</y-cell>
                 </y-list-item>
-                <y-catalogue id="tpdo">
-                    <y-catalogue-item filter="Skill" label="Skill" id="b279" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
+                <y-catalogue id="qc64">
+                    <y-catalogue-item filter="Skill" label="Skill" id="6sup" url="/samphire/data/demo/type/catalogue/sheet/skills"/>
                 </y-catalogue>
             </y-list>
         </y-panel-item>
     </y-panel>
-    <y-panel id="lmb2">
-        <y-panel-item id="3e1f">
+    <y-panel id="9ipz">
+        <y-panel-item id="vjlt">
             <h3>Talents</h3>
-            <y-list tag="Talents" id="np5m">
-                <y-list-item tag="Talent" id="n81t">
-                    <b><y-cell tag="Name" id="wi3p">Spring Leap</y-cell></b>
-                    (<y-cell tag="Type" id="gpi2">Movement</y-cell>)
-                    <y-cell tag="Summary" id="t995">Melony can leap twice her height vertically or three times horizontally without a roll, and lands silently in water or soft ground.</y-cell>
+            <y-list tag="Talents" id="auxc">
+                <y-list-item tag="Talent" id="x6t3">
+                    <b><y-cell tag="Name" id="p9g6">Spring Leap</y-cell></b>
+                    (<y-cell tag="Type" id="b20m">Movement</y-cell>)
+                    <y-cell tag="Summary" id="k1wm">Melony can leap twice her height vertically or three times horizontally without a roll, and lands silently in water or soft ground.</y-cell>
                 </y-list-item>
-                <y-catalogue id="7yq8">
-                    <y-catalogue-item filter="Talent" label="Talent" id="3zma" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
+                <y-catalogue id="l1bg">
+                    <y-catalogue-item filter="Talent" label="Talent" id="nukx" url="/samphire/data/demo/type/catalogue/sheet/talents"/>
                 </y-catalogue>
             </y-list>
         </y-panel-item>
     </y-panel>
-    <y-panel id="lpq8">
-        <y-panel-item id="na9d">
+    <y-panel id="wwmy">
+        <y-panel-item id="2o7t">
             <h3>Spells</h3>
-            <y-list tag="Spells" id="y0e2">
-                <y-list-item tag="Spell" id="2e8j">
-                    <b><y-cell tag="Name" id="nvwt">Lantern Glow</y-cell></b>
-                    (<y-cell tag="School" id="xlg6">Glowmoss</y-cell>)
-                    Cost: <y-cell tag="Cost" id="p2jt">1</y-cell>,
-                    Range: <y-cell tag="Range" id="v0om">Near</y-cell>,
-                    Duration: <y-cell tag="Duration" id="y97v">10 minutes</y-cell>.
-                    <y-cell tag="Summary" id="l472">A bead of warm light clings to a leaf, button, or walking stick.</y-cell>
+            <y-list tag="Spells" id="ogv0">
+                <y-list-item tag="Spell" id="50ak">
+                    <b><y-cell tag="Name" id="6cn6">Lantern Glow</y-cell></b>
+                    (<y-cell tag="School" id="u5fy">Glowmoss</y-cell>)
+                    Cost: <y-cell tag="Cost" id="v6a5">1</y-cell>,
+                    Range: <y-cell tag="Range" id="9pbd">Near</y-cell>,
+                    Duration: <y-cell tag="Duration" id="val0">10 minutes</y-cell>.
+                    <y-cell tag="Summary" id="2zhe">A bead of warm light clings to a leaf, button, or walking stick.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Spell" id="dy3u">
-                    <b><y-cell tag="Name" id="6mfc">Acorn Bolt</y-cell></b>
-                    (<y-cell tag="School" id="32u8">Oakfire</y-cell>)
-                    Cost: <y-cell tag="Cost" id="9yx5">2</y-cell>,
-                    Range: <y-cell tag="Range" id="944z">Far</y-cell>,
-                    Duration: <y-cell tag="Duration" id="s5th">Instant</y-cell>.
-                    <y-cell tag="Summary" id="yezb">Launches a hardened acorn of force that deals 3 damage to one target.</y-cell>
+                <y-list-item tag="Spell" id="xzec">
+                    <b><y-cell tag="Name" id="nrha">Acorn Bolt</y-cell></b>
+                    (<y-cell tag="School" id="fzmg">Oakfire</y-cell>)
+                    Cost: <y-cell tag="Cost" id="jsnk">2</y-cell>,
+                    Range: <y-cell tag="Range" id="bqlm">Far</y-cell>,
+                    Duration: <y-cell tag="Duration" id="6bd8">Instant</y-cell>.
+                    <y-cell tag="Summary" id="ru7i">Launches a hardened acorn of force that deals 3 damage to one target.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Spell" id="b9rp">
-                    <b><y-cell tag="Name" id="xd08">Gust Hop</y-cell></b>
-                    (<y-cell tag="School" id="ka7y">Skydance</y-cell>)
-                    Cost: <y-cell tag="Cost" id="kuft">1</y-cell>,
-                    Range: <y-cell tag="Range" id="9b20">Self</y-cell>,
-                    Duration: <y-cell tag="Duration" id="cbr0">1 round</y-cell>.
-                    <y-cell tag="Summary" id="cb48">A swift updraft boosts jumps and lets the caster cross a short gap safely.</y-cell>
+                <y-list-item tag="Spell" id="fzue">
+                    <b><y-cell tag="Name" id="93x2">Gust Hop</y-cell></b>
+                    (<y-cell tag="School" id="rvdp">Skydance</y-cell>)
+                    Cost: <y-cell tag="Cost" id="hz9u">1</y-cell>,
+                    Range: <y-cell tag="Range" id="5y1m">Self</y-cell>,
+                    Duration: <y-cell tag="Duration" id="9fjp">1 round</y-cell>.
+                    <y-cell tag="Summary" id="u8mb">A swift updraft boosts jumps and lets the caster cross a short gap safely.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Spell" id="a7k2">
-                    <b><y-cell tag="Name" id="qkea">Moonveil</y-cell></b>
-                    (<y-cell tag="School" id="d56y">Nightweave</y-cell>)
-                    Cost: <y-cell tag="Cost" id="6aoj">2</y-cell>,
-                    Range: <y-cell tag="Range" id="k654">Near</y-cell>,
-                    Duration: <y-cell tag="Duration" id="i7a7">10 minutes</y-cell>.
-                    <y-cell tag="Summary" id="sm9j">Shadows gather around an ally, improving stealth and masking scent.</y-cell>
+                <y-list-item tag="Spell" id="ngrs">
+                    <b><y-cell tag="Name" id="rzcq">Moonveil</y-cell></b>
+                    (<y-cell tag="School" id="k9rm">Nightweave</y-cell>)
+                    Cost: <y-cell tag="Cost" id="zs89">2</y-cell>,
+                    Range: <y-cell tag="Range" id="vlci">Near</y-cell>,
+                    Duration: <y-cell tag="Duration" id="itcl">10 minutes</y-cell>.
+                    <y-cell tag="Summary" id="cndr">Shadows gather around an ally, improving stealth and masking scent.</y-cell>
                 </y-list-item>
-                <y-catalogue id="bedf">
-                    <y-catalogue-item filter="Spell" label="Spell" id="5k8z" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
+                <y-catalogue id="u34h">
+                    <y-catalogue-item filter="Spell" label="Spell" id="6aoq" url="/samphire/data/demo/type/catalogue/sheet/spells"/>
                 </y-catalogue>
             </y-list>
         </y-panel-item>
     </y-panel>
-    <y-panel id="xdix">
-        <y-panel-item id="dlwg">
+    <y-panel id="ddb1">
+        <y-panel-item id="ns23">
             <h3>Gear</h3>
-            <y-list tag="Gear" id="9p5p">
-                <y-list-item tag="Weapon" id="ssrd">
-                    <b><y-cell tag="Name" id="4a87">Briar Knife</y-cell></b>
-                    (<y-cell tag="Category" id="sok6">Melee</y-cell>)
-                    <y-cell tag="Damage" id="dit7">d6+d4</y-cell>,
-                    Reach: <y-cell tag="Reach" id="o0mb">0</y-cell>,
-                    Hands: <y-cell tag="Hands" id="onza">1</y-cell>,
-                    <y-cell tag="Notes" id="8u09">Hidden in her sleeve; doubles as a prop for stage knife tricks.</y-cell>
+            <y-list tag="Gear" id="k8pg">
+                <y-list-item tag="Weapon" id="ubhy">
+                    <b><y-cell tag="Name" id="5z50">Briar Knife</y-cell></b>
+                    (<y-cell tag="Category" id="08tf">Melee</y-cell>)
+                    <y-cell tag="Damage" id="wb8n">d6+d4</y-cell>,
+                    Reach: <y-cell tag="Reach" id="jwbb">0</y-cell>,
+                    Hands: <y-cell tag="Hands" id="kte7">1</y-cell>,
+                    <y-cell tag="Notes" id="r50w">Hidden in her sleeve; doubles as a prop for stage knife tricks.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Item" id="ehhc">
-                    <b><y-cell tag="Name" id="uuxi">Conjurer's Pouch</y-cell></b>
-                    (<y-cell tag="Type" id="ygu4">Performance</y-cell>)
-                    <y-cell tag="Summary" id="lfzs">A deep-pocketed bag holding scarves, tokens, mirror shards, and small props for stage illusions and sleight-of-hand tricks.</y-cell>
+                <y-list-item tag="Item" id="4ohi">
+                    <b><y-cell tag="Name" id="uo0x">Conjurer's Pouch</y-cell></b>
+                    (<y-cell tag="Type" id="vlqh">Performance</y-cell>)
+                    <y-cell tag="Summary" id="u7s6">A deep-pocketed bag holding scarves, tokens, mirror shards, and small props for stage illusions and sleight-of-hand tricks.</y-cell>
                 </y-list-item>
-                <y-list-item tag="Item" id="fizp">
-                    <b><y-cell tag="Name" id="2a4v">Sap Lantern</y-cell></b>
-                    (<y-cell tag="Type" id="chxu">Light Source</y-cell>)
-                    <y-cell tag="Summary" id="8mya">Jar lamp with slow-burning pine sap and a shutter for dimming; essential for dramatic stage lighting.</y-cell>
+                <y-list-item tag="Item" id="n16z">
+                    <b><y-cell tag="Name" id="6tmz">Sap Lantern</y-cell></b>
+                    (<y-cell tag="Type" id="gkur">Light Source</y-cell>)
+                    <y-cell tag="Summary" id="nvr8">Jar lamp with slow-burning pine sap and a shutter for dimming; essential for dramatic stage lighting.</y-cell>
                 </y-list-item>
-                <y-catalogue id="g7ar">
-                    <y-catalogue-item filter="Weapon" label="Weapon" id="0m33" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
-                    <y-catalogue-item filter="Item" label="Item" id="4c9k" url="/samphire/data/demo/type/catalogue/sheet/items"/>
+                <y-catalogue id="9hsv">
+                    <y-catalogue-item filter="Weapon" label="Weapon" id="q846" url="/samphire/data/demo/type/catalogue/sheet/weapons"/>
+                    <y-catalogue-item filter="Item" label="Item" id="6xgz" url="/samphire/data/demo/type/catalogue/sheet/items"/>
                 </y-catalogue>
             </y-list>
         </y-panel-item>
     </y-panel>
-    <y-panel id="gwlu">
-        <y-panel-item id="9rv4">
+    <y-panel id="ejnq">
+        <y-panel-item id="srbp">
             <h3>Notes</h3>
-            <y-text id="c14b">
+            <y-text id="jhat">
                 <p>Melony is intended as a copyright-safe example character for the fictional woodland game used in the Samphire demo database.</p>
             </y-text>
         </y-panel-item>
