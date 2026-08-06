@@ -55,8 +55,7 @@ const props = defineProps({
     },
     uuid: {
         type: String,
-        required: false,
-        default: null
+        required: true
     },
     filename: {
         type: String,
