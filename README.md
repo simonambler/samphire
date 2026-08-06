@@ -15,9 +15,6 @@ Samphire is a web-based character sheet server for tabletop role-playing games (
 - [Usage Guide](#usage-guide)
 - [Character Sheet XML Guide](#character-sheet-xml-guide)
 - [Demo Database Reference](#demo-database-reference)
-- [Screenshots](#screenshots)
-- [Troubleshooting](#troubleshooting)
-- [Project Roadmap](#project-roadmap)
 - [License](#license)
 
 ## Overview
