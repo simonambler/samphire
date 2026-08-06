@@ -218,6 +218,21 @@ YText supports emphasis, headings, lists, paragraph/horizontal-rule blocks, undo
 | Structure | Horizontal rule |
 | History | Undo, Redo |
 
+### Image
+
+An **image** field is a framed area for portraits, item art, maps, or other visual references on a sheet.
+
+If you can edit the sheet, clicking the image frame opens an upload dialog. After upload, the new image appears in that frame and is saved in the database. If you only have read access, the frame still displays the image but upload is disabled.
+
+> To add or replace an image:
+>
+>   - Click the image frame.
+>   - Choose an image file from your device.
+>   - Click **Upload**.
+>   - Wait for the frame to refresh with the new image.
+
+You can leave some frames empty as placeholders (for example "Upload character portrait") and fill them later during play.
+
 ### Tally
 
 A **tally** is a series of checkboxes used to record a count or tracked value from 0 to a specified maximum.
@@ -286,6 +301,8 @@ Authoring a Samphire sheet means writing an XML document whose structure defines
 | y-cell | Inline editable value field for short text data (for example numbers, names, or brief notes) inside any sheet section. | Rendered as an inline `span.y-cell`; when writable, users edit in place and press Enter or Tab to submit, with updates posted immediately and content reverted if submit fails (or if edit is canceled). | `id` (required for writable behavior; when absent the cell is read-only). |
 | y-tally | Series of checkboxes representing an integer value from 0 to a maximum, used to track counts, resources, or limited abilities. Clicking a box toggles its state: filling it and all boxes to the left, or emptying it and all boxes to the right. | Rendered as a series of box icons (`span.y-tally`) with keyboard and mouse interactivity; each click updates the value and posts to the database, with updates reverting if the save fails and a visual transition indicator shown during update. Keyboard shortcuts (when focused): Up/Right arrow, +, =, or any letter key to increment; Down/Left arrow, -, _, Space, or Backspace to decrement. | `id` (required for writable behavior; when absent the tally is read-only), `max` (optional, specifies the number of boxes in the series; default is 1). |
 | y-text | Rich-text content area for longer prose (for example background notes, session logs, or free-form descriptions) with inline formatting controls. | Rendered as a TipTap editor block with a focus-sensitive toolbar (bold, italic, underline, headings, lists, undo/redo, save); content is persisted only when the Save button is clicked, and failed saves revert to the last saved version. | `id` (required for writable behavior; when absent the editor is read-only). |
+| y-image | Image frame container for optional placeholder content and uploaded media. Used for portrait blocks, item art, maps, and similar visuals. Typically contains either placeholder markup or a single `y-image-content` child after upload. | Rendered as a framed block (`div.y-image`). Writable frames are clickable and open an upload modal; read-only frames display content without upload controls. | `id` (required for writable behavior; when absent the frame is read-only), `height` (optional CSS size), `width` (optional CSS size). |
+| y-image-content | Metadata-backed image node representing one stored media object inside a `y-image` frame. Carries UUID and source information for loading binary content from the media endpoint. | Rendered as an image element (`img.y-image-content`) sized from `width`/`height`; if no source is available, renders a neutral placeholder block. | `id` (recommended), `height` (optional CSS size), `width` (optional CSS size), `uuid` (required), `filename` (optional), `content-type` (optional), `src` (optional relative media URL). |
 | y-list | Container for heterogeneous collections (for example Gear, Spells, Contacts) where items can have different internal layouts but share one logical list. Direct children must be `y-list-item` elements, with an optional final `y-catalogue` child for add-from-catalogue sources. | Rendered as a block list (`div.y-list`) with list controls; writable lists support drag-and-drop reordering plus selection mode for multi-item delete, while read-only lists show content without edit controls. | `id` (required for writable list operations), `tag` (optional grouping key used by drag-and-drop behavior). |
 | y-list-item | One entry row within a `y-list`, wrapping the item's visible fields and semantics (for example one weapon, one spell, or one linked sheet summary). | Rendered as a block row (`div.y-list-item`) with either a drag handle (normal mode) or a checkbox (selection mode), followed by the item content. | `id` (required for reliable selection/delete operations). |
 | y-catalogue | Source-link container at the end of a `y-list` that defines where new items can be selected from. Direct children must be `y-catalogue-item` elements. | Rendered as a horizontal catalogue action row (`div.y-catalogue`) separated from list items by a top border; each child renders an add button/trigger. | `id` (not currently used). |
