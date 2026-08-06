@@ -232,7 +232,15 @@ declare
   function page:load-demo() as empty-sequence() {
     (
       if (not(db:exists($page:demo-database-name))) then
-        db:create($page:demo-database-name, $page:demo-database-source)
+        db:create(
+          $page:demo-database-name,
+          $page:demo-database-source,
+          (),
+          map {
+            'createfilter': '*.xml',
+            'addraw': true()
+          }
+        )
       else (),
       update:output(web:redirect('/samphire/home'))
     )
