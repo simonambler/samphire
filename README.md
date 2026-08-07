@@ -89,9 +89,18 @@ podman pull docker.io/sjambler/samphire:latest
 docker pull docker.io/sjambler/samphire:latest
 ```
 
+The image is available for two target platforms: `linux/arm64/v8` and `linux/amd64/v4`.  On Windows you may have to explicitly specify the platform, e.g.:
+
+**Podman (platform):**
+```
+podman pull --platform=linux/amd64/v4 docker.io/sjambler/samphire
+```
+
+The OS is specified as `linux`, even on Windows, because the Podman and Docker desktops both run under the Windows Subsystem for Linux (WSL).
+
 ### Run the Software
 
-Download `run-container.sh` and open it in a text editor. Before running it, make three edits:
+If you are running on Linux or Mac then download [run-container.sh](run-container.sh).  If you are on Windows you should download the equivalent [run-container.bat](run-container.bat).  In either case, open the script in a text editor and make the following changes, before running it:
 
 1. **Set a strong password.** Replace every occurrence of `replace-with-strong-password` with a password of your choice. This password protects the TLS keystore and is not exposed to players.
 
