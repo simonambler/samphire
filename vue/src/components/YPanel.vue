@@ -44,6 +44,8 @@ const props = defineProps({
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        column-gap: 2.0rem;
+        row-gap: 1.0rem;
         justify-content: space-between;
     }
 
