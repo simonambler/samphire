@@ -38,6 +38,7 @@ const props = defineProps({
     .y-panel {
         margin: 1%;
         padding: 2%;
+        min-width: 0;
         border-width: 2px;
         border-style: solid;
         border-radius: 25px;

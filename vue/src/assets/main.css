@@ -1,3 +1,9 @@
+html {
+  /* prevent iOS Safari from auto-scaling text, which shifts wrap points */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   margin: 0px;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;

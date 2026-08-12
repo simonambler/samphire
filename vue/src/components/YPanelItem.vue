@@ -37,6 +37,7 @@ const props = defineProps({
 
     .y-panel-item {
         display: block;
+        min-width: 0;
     }
 
 }
