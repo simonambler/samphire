@@ -149,6 +149,7 @@ function uploadImage() {
         overflow: hidden;
         min-width: 20px;
         min-height: 20px;
+        margin: 0.5rem;
         background: rgba(20, 54, 66, 0.14);
         border: 1px solid rgba(20, 54, 66, 0.2);
         cursor: pointer;
