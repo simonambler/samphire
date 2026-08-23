@@ -134,6 +134,7 @@ function duplicateSelectedItems() {
         return;
     }
     postit(`./duplicate/${props.id}`, {}, Array.from(selection.value).join(','), null, null, () => {
+        selectMode.value = false;
         selection.value.clear();
         refresh();
     });
