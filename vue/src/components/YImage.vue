@@ -144,7 +144,9 @@ function uploadImage() {
 @layer sfc {
 
     .y-image {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         overflow: hidden;
         min-width: 20px;
