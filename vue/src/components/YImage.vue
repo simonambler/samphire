@@ -60,13 +60,11 @@ const props = defineProps({
     },
     height: {
         type: [Number, String],
-        required: false,
-        default: null
+        required: true
     },
     width: {
         type: [Number, String],
-        required: false,
-        default: null
+        required: true
     }
 });
 
@@ -87,10 +85,20 @@ function asCssSize(value) {
     return /^\d+$/.test(String(value)) ? `${value}px` : String(value);
 }
 
-const frameStyle = computed(() => ({
-    width: asCssSize(props.width),
-    height: asCssSize(props.height)
-}));
+const frameStyle = computed(() => {
+    const w = asCssSize(props.width);
+    const h = asCssSize(props.height);
+    const style = {
+        width: w,
+        height: h
+    };
+    const widthNum = String(props.width).replace(/\D/g, '');
+    const heightNum = String(props.height).replace(/\D/g, '');
+    if (widthNum && heightNum) {
+        style.aspectRatio = `${widthNum} / ${heightNum}`;
+    }
+    return style;
+});
 
 function openUploadDialog() {
     if (readonly) {
@@ -151,10 +159,14 @@ function uploadImage() {
         overflow: hidden;
         min-width: 20px;
         min-height: 20px;
+        max-width: 100%;
+        max-height: 100vh;
+        height: auto !important;
         margin: 0.5rem;
         background: rgba(20, 54, 66, 0.14);
         border: 1px solid rgba(20, 54, 66, 0.2);
         cursor: pointer;
+        box-sizing: border-box;
     }
 
     .y-image-readonly {

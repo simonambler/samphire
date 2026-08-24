@@ -102,7 +102,10 @@ const imageStyle = computed(() => ({
 
     .y-image-content {
         display: block;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover;
+        max-width: 100%;
     }
 
     .y-image-content-missing {
