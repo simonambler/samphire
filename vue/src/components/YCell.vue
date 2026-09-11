@@ -22,7 +22,6 @@
       :contenteditable="readonly ? 'false' : 'true'"
       @focus="ready"
       @keydown.enter.prevent="submit"
-      @keydown.tab="submit"
       @keyup.esc="cancel"
       @blur="done"
       class="y-cell"
@@ -44,35 +43,27 @@
   });
 
   const bak = ref('');
-  const pending = ref(false);
 
   const readonly = props.id === null;
 
   const ready = (e) => {
+    e.target.innerText = e.target.innerText.trim();
     bak.value = e.target.innerText;
   };
 
   const submit = (e) => {
-    // trim whitespace
-    e.target.innerText = e.target.innerText.trim();
-    // if the text has changed, mark as pending
-    pending.value = (bak.value !== e.target.innerText);
-    // blur the element to trigger the done event
-    if (e.key === 'Enter') {
-      e.target.blur();
-    }
+    e.target.blur();
   };
 
   const cancel = (e) => {
+    revert(e);
     e.target.blur();
   };
 
   const done = (e) => {
-    if (pending.value) {
-      pending.value = false;
+    e.target.innerText = e.target.innerText.trim();
+    if (bak.value !== e.target.innerText) {
       postit(`./edit/${props.id}`, {}, e.target.innerText, null, () => revert(e), null);
-    } else {
-      revert(e);
     }
   };
 
