@@ -17,7 +17,7 @@
 -->
 
 <template>
-    <div :id="id" @focusin="isFocused = true" @focusout="isFocused = false">
+    <div ref="root" :id="id" @focusin="isFocused = true" @focusout="handleFocusOut">
         <div v-if="editor" :class="{ 'menubar': true, 'is-focused': isFocused, 'is-hidden': !isFocused }">
             <button class="menubar_button" :class="{ 'is-active': editor.isActive('bold') }" @click="editor.chain().focus().toggleBold().run()">
                 <font-awesome-icon icon="bold" />
@@ -100,6 +100,8 @@ const slots = useSlots();
 
 const editor = ref(null);
 
+const root = ref(null);
+
 const isFocused = ref(false);
 
 const lastSavedContent = ref(null);
@@ -112,6 +114,9 @@ const getContent = () => {
 
 const saveContent = () => {
     const currentContent = getContent();
+    if (currentContent === lastSavedContent.value) {
+        return;
+    }
     putIt(
         `./save/${props.id}`, 
         {'Content-Type': 'text/html'}, 
@@ -130,6 +135,13 @@ const saveContent = () => {
     );
 };
 
+const handleFocusOut = (e) => {
+    isFocused.value = false;
+    if (!root.value.contains(e.relatedTarget)) {
+        saveContent();
+    }
+};
+
 onMounted(() => {
     const wrapper = document.createElement('div');
     const content = createApp({
@@ -141,7 +153,7 @@ onMounted(() => {
         editable: !readonly
     });
     // Store the initial content as the last saved content
-    lastSavedContent.value = content;
+    lastSavedContent.value = getContent();
 });
 
 onBeforeUnmount(() => {
