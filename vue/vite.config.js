@@ -16,6 +16,7 @@ export default defineConfig({
     host: '127.0.0.1',
     proxy: {
       // string shorthand: http://localhost:5173/samphire/data -> http://localhost:8080/samphire/data
+      '^/samphire/?$': 'http://localhost:8080',
       '/samphire/data': 'http://localhost:8080',
       '/samphire/login': 'http://localhost:8080',
       '/samphire/logout': 'http://localhost:8080',

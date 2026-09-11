@@ -30,6 +30,14 @@ declare variable $page:demo-database-name := 'demo';
 declare variable $page:demo-database-source := '/var/lib/jetty/basex/sample/demo';
 
 declare
+  %updating
+  %rest:path('/samphire')
+  %rest:GET
+  function page:redirect-home() as empty-sequence() {
+    update:output(web:redirect('/samphire/home'))
+  };
+
+declare
   %rest:path("/samphire/home")
   %rest:GET
   %output:method("html")
