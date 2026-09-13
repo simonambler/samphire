@@ -24,7 +24,7 @@
       @keydown.enter.prevent="submit"
       @keyup.esc="cancel"
       @blur="done"
-      class="y-cell"
+      :class="['y-cell', { 'is-saving': saving }]"
     >
       <slot></slot>
     </span>
@@ -43,6 +43,7 @@
   });
 
   const bak = ref('');
+  const saving = ref(false);
 
   const readonly = props.id === null;
 
@@ -63,7 +64,16 @@
   const done = (e) => {
     e.target.innerText = e.target.innerText.trim();
     if (bak.value !== e.target.innerText) {
-      postit(`./edit/${props.id}`, {}, e.target.innerText, null, () => revert(e), null);
+      // the shade is cleared only on success, so failed or hung saves stay marked
+      saving.value = true;
+      postit(
+        `./edit/${props.id}`,
+        {},
+        e.target.innerText,
+        () => { saving.value = false; },
+        () => revert(e),
+        null
+      );
     }
   };
 
@@ -79,6 +89,14 @@
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
+    border-radius: 2px;
+    transition: background-color .4s ease-out, box-shadow .4s ease-out;
+  }
+
+  .y-cell.is-saving {
+    background-color: rgba(0, 0, 0, .18);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .18);
+    transition: none;
   }
 
     .y-cell:empty:focus {

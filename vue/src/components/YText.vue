@@ -62,7 +62,7 @@
                 <font-awesome-icon icon="save" />
             </button>
         </div>
-        <editor-content class="editor" :editor="editor"/>
+        <editor-content :class="['editor', { 'is-saving': saving }]" :editor="editor"/>
     </div>
 </template>
   
@@ -106,6 +106,8 @@ const isFocused = ref(false);
 
 const lastSavedContent = ref(null);
 
+const saving = ref(false);
+
 const readonly = props.id === null;
 
 const getContent = () => {
@@ -117,6 +119,8 @@ const saveContent = () => {
     if (currentContent === lastSavedContent.value) {
         return;
     }
+    // the shade is cleared only on success, so failed or hung saves stay marked
+    saving.value = true;
     putIt(
         `./save/${props.id}`, 
         {'Content-Type': 'text/html'}, 
@@ -124,6 +128,7 @@ const saveContent = () => {
         // onSucceed: update last saved content
         () => {
             lastSavedContent.value = currentContent;
+            saving.value = false;
         },
         // onFail: revert to last saved content
         () => {
@@ -208,6 +213,14 @@ onBeforeUnmount(() => {
     .editor {
         text-align: left;
         margin: 10px;
+        border-radius: 2px;
+        transition: background-color .4s ease-out, box-shadow .4s ease-out;
+    }
+
+    .editor.is-saving {
+        background-color: rgba(0, 0, 0, .18);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, .18);
+        transition: none;
     }
 
 }
