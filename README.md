@@ -194,9 +194,10 @@ Cells are the basic building blocks of a character sheet.  They will be used to 
 > 
 >   - Click the cell to focus.  It will switch into edit mode.
 >   - Add or amend the content as you wish.
->   - Press **Enter** or **Tab** to submit.
->   - If you type **Esc** or click elsewhere without submitting, it reverts.
->   - If submit fails, it also reverts so the view stays synchronized with stored data.
+>   - Your change is saved when you leave the cell — by pressing **Enter** or **Tab**, or simply by clicking elsewhere.
+>   - A shaded background marks a save in progress.  It clears when the save succeeds, so a brief pulse means all is well.  If the shading persists, the change has not been stored (for example because of a network problem).
+>   - Press **Esc** to discard your changes and revert to the stored value.
+>   - If the save fails, it also reverts so the view stays synchronized with stored data.
 
 Cells accept a short amount of plain text but the values are not constrained. This is consistent with the ethos of a direct paper-and-pencil replacement.  It allows players and GM the freedom to annotate cells as they wish.  The GM might prepare a character template in which _Strength_ is a cell containing '3d6'.  A player could edit this to '14 (+3)' where the '+3' is the bonus for wearing their magic gauntlets.
 
@@ -211,11 +212,12 @@ Text areas allow players to add paragraphs with rich text formatting.  This migh
 >   - Click the text area to focus.  The formatting toolbar will appear.
 >   - Add or amend the text as you wish.
 >   - Style the content using the formatting toolbar.
->   - Click **Save** (disk icon) to commit changes.
->   - Rich text is not auto-saved on blur.
+>   - Your work is saved automatically when you click away from the editor and its toolbar.
+>   - A shaded background marks a save in progress, clearing when the save succeeds.
+>   - When typing a long passage, click **Save** (disk icon) from time to time rather than relying on the automatic save at the end.  This keeps your work safe and confirms that the connection to the server is healthy.
 >   - If save fails, the editor restores the previous saved state and shows an error.
 
-YText supports emphasis, headings, lists, paragraph/horizontal-rule blocks, undo/redo, and explicit save from the toolbar.
+YText supports emphasis, headings, lists, paragraph/horizontal-rule blocks, undo/redo, automatic saving when focus leaves the editor, and explicit save from the toolbar.
 
 | Action group | Supported actions |
 | --- | --- |
@@ -305,9 +307,9 @@ Authoring a Samphire sheet means writing an XML document whose structure defines
 | y-panel-item | Individual sub-section within a panel; wraps related content fields. | Rendered as a block-level container (`div.y-panel-item`) that flows within the parent panel's flex layout. | `id` (not currently used). |
 | y-array | Compact stat-block container for paired values (for example attributes, derived stats, or tracked resources). Direct children must be `y-array-item` elements. | Rendered as a two-column CSS grid (`div.y-array`) sized to content, with alternating alignment so labels sit on the left and values on the right. | `id` (not currently used). |
 | y-array-item | One label/value entry within a `y-array`; defines the display label and wraps the associated field or value content. | Rendered as two inline spans: a label span showing `label:` followed by a value span containing the item content. | `label` (required), `id` (not currently used). |
-| y-cell | Inline editable value field for short text data (for example numbers, names, or brief notes) inside any sheet section. | Rendered as an inline `span.y-cell`; when writable, users edit in place and press Enter or Tab to submit, with updates posted immediately and content reverted if submit fails (or if edit is canceled). | `id` (required for writable behavior; when absent the cell is read-only). |
+| y-cell | Inline editable value field for short text data (for example numbers, names, or brief notes) inside any sheet section. | Rendered as an inline `span.y-cell`; when writable, users edit in place and the value is posted when focus leaves the cell (by pressing Enter or Tab, or by clicking away), with a shaded background while the save is in flight and content reverted if the save fails or the edit is canceled with Esc. | `id` (required for writable behavior; when absent the cell is read-only). |
 | y-tally | Series of checkboxes representing an integer value from 0 to a maximum, used to track counts, resources, or limited abilities. Clicking a box toggles its state: filling it and all boxes to the left, or emptying it and all boxes to the right. | Rendered as a series of box icons (`span.y-tally`) with keyboard and mouse interactivity; each click updates the value and posts to the database, with updates reverting if the save fails and a visual transition indicator shown during update. Keyboard shortcuts (when focused): Up/Right arrow, +, =, or any letter key to increment; Down/Left arrow, -, _, Space, or Backspace to decrement. | `id` (required for writable behavior; when absent the tally is read-only), `max` (optional, specifies the number of boxes in the series; default is 1). |
-| y-text | Rich-text content area for longer prose (for example background notes, session logs, or free-form descriptions) with inline formatting controls. | Rendered as a TipTap editor block with a focus-sensitive toolbar (bold, italic, underline, headings, lists, undo/redo, save); content is persisted only when the Save button is clicked, and failed saves revert to the last saved version. | `id` (required for writable behavior; when absent the editor is read-only). |
+| y-text | Rich-text content area for longer prose (for example background notes, session logs, or free-form descriptions) with inline formatting controls. | Rendered as a TipTap editor block with a focus-sensitive toolbar (bold, italic, underline, headings, lists, undo/redo, save); content is persisted when focus leaves the editor and toolbar, or when the Save button is clicked, with a shaded background while the save is in flight and failed saves reverting to the last saved version. | `id` (required for writable behavior; when absent the editor is read-only). |
 | y-image | Image frame container for optional placeholder content and uploaded media. Used for portrait blocks, item art, maps, and similar visuals. Typically contains either placeholder markup or a single `y-image-content` child after upload. | Rendered as a framed block (`div.y-image`). Writable frames are clickable and open an upload modal; read-only frames display content without upload controls. | `id` (required for writable behavior; when absent the frame is read-only), `height` (optional CSS size), `width` (optional CSS size). |
 | y-image-content | Metadata-backed image node representing one stored media object inside a `y-image` frame. Carries UUID and source information for loading binary content from the media endpoint. | Rendered as an image element (`img.y-image-content`) sized from `width`/`height`; if no source is available, renders a neutral placeholder block. | `id` (recommended), `height` (optional CSS size), `width` (optional CSS size), `uuid` (required), `filename` (optional), `content-type` (optional), `src` (optional relative media URL). |
 | y-list | Container for heterogeneous collections (for example Gear, Spells, Contacts) where items can have different internal layouts but share one logical list. Direct children must be `y-list-item` elements, with an optional final `y-catalogue` child for add-from-catalogue sources. | Rendered as a block list (`div.y-list`) with list controls; writable lists support drag-and-drop reordering plus selection mode for multi-item delete, while read-only lists show content without edit controls. | `id` (required for writable list operations), `tag` (optional grouping key used by drag-and-drop behavior). |
