@@ -93,6 +93,7 @@ declare function login:access-rights(
     $isWritePublic
   return map {
     'isAdmin': $isAdmin,
+    'isOwner': $isOwner,
     'hasReadAccess': $hasReadAccess,
     'hasWriteAccess': $hasWriteAccess
   }
@@ -141,7 +142,7 @@ declare
     let $sheet := $doc/y-sheet
     let $access := login:access-rights($authUser, $database, $sheet)
     let $hasReadAccess := $method = 'GET' and $access?hasReadAccess
-    let $hasWriteAccess := ($method = 'PUT' or $method = 'POST') and $access?hasWriteAccess
+    let $hasWriteAccess := $method = ('PUT', 'POST', 'DELETE') and $access?hasWriteAccess
     where not($hasReadAccess or $hasWriteAccess)
     return web:error(403, 'No permission.')
   };

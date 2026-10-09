@@ -65,10 +65,19 @@ declare
   {
     let $path := concat($type, '/', $document, '.xml')
     let $authUser := session:get('authUser')
+    let $existingPath := concat($database, '/', $path)
+    let $existingSheet := if (doc-available($existingPath)) then doc($existingPath)/y-sheet else ()
+    let $owner := ($existingSheet/@owner/string(), $authUser)[1]
+    let $read := $existingSheet/@read/string()
+    let $write := $existingSheet/@write/string()
     let $doc := $value update {
       ids:refresh-ids((), .),
       delete node ./y-sheet/@owner,
-      insert node attribute { 'owner' } { $authUser } into ./y-sheet
+      delete node ./y-sheet/@read,
+      delete node ./y-sheet/@write,
+      insert node attribute { 'owner' } { $owner } into ./y-sheet,
+      if (exists($read)) then insert node attribute { 'read' } { $read } into ./y-sheet else (),
+      if (exists($write)) then insert node attribute { 'write' } { $write } into ./y-sheet else ()
     }
     return db:put($database, $doc, $path)
   };
@@ -232,14 +241,18 @@ declare
     let $owner := $json/owner/string()
     let $read := $json/read/string()
     let $write := $json/write/string()
-    return (
-      delete node $sheet/@owner,
-      delete node $sheet/@read,
-      delete node $sheet/@write,
-      insert node attribute { 'owner' } { $owner } into $sheet,
-      insert node attribute { 'read' } { $read } into $sheet,
-      insert node attribute { 'write' } { $write } into $sheet
-    )
+    let $authUser := session:get('authUser')
+    let $access := login:access-rights($authUser, $database, $sheet)
+    return if (not($access?isAdmin) and $owner != $sheet/@owner/string()) then
+      web:error(403, 'Only an administrator can change sheet ownership.')
+    else (
+        delete node $sheet/@owner,
+        delete node $sheet/@read,
+        delete node $sheet/@write,
+        insert node attribute { 'owner' } { $owner } into $sheet,
+        insert node attribute { 'read' } { $read } into $sheet,
+        insert node attribute { 'write' } { $write } into $sheet
+      )
   };
 
 declare
@@ -339,10 +352,17 @@ declare
             if (empty($sheet)) then
               web:error(400, 'Uploaded file must contain a y-sheet root element.')
             else (),
+            let $owner := ($existing-sheet/@owner/string(), $authUser)[1]
+            let $read := $existing-sheet/@read/string()
+            let $write := $existing-sheet/@write/string()
             let $doc := $parsed update {
               ids:refresh-ids((), .),
               delete node ./y-sheet/@owner,
-              insert node attribute { 'owner' } { $authUser } into ./y-sheet
+              delete node ./y-sheet/@read,
+              delete node ./y-sheet/@write,
+              insert node attribute { 'owner' } { $owner } into ./y-sheet,
+              if (exists($read)) then insert node attribute { 'read' } { $read } into ./y-sheet else (),
+              if (exists($write)) then insert node attribute { 'write' } { $write } into ./y-sheet else ()
             }
             return db:put($database, $doc, $path),
             update:output(web:redirect(concat('/samphire/data/', $database, '/type/', $type, '/view')))
