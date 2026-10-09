@@ -107,7 +107,8 @@ declare
     let $isUnsafeMethod := $method = ('POST', 'PUT', 'PATCH', 'DELETE')
     let $usesFormCsrfToken :=
       ($method = 'POST' and $path = '/samphire/login') or
-      ($method = 'POST' and $path = '/samphire/home/load-demo')
+      ($method = 'POST' and $path = '/samphire/home/load-demo') or
+      ($method = 'POST' and $path = '/samphire/logout')
     return
       if ($isUnsafeMethod and not(request:header('X-Samphire-Request') = 'true') and not($usesFormCsrfToken))
       then web:error(403, 'CSRF validation failed.')
@@ -356,10 +357,16 @@ declare
   };
 
 declare
-  %rest:path("/samphire/logout")
-  %rest:GET
-  function login:logout() as element() {
-    session:delete('authUser'),
-    session:delete('requestPath'),
-    web:redirect('/samphire/login')
+  %rest:path('/samphire/logout')
+  %rest:POST
+  %rest:form-param('csrfToken', '{$csrfToken}')
+  function login:logout($csrfToken as xs:string?) as element() {
+    if (not(login:valid-csrf-token($csrfToken))) then
+      web:error(403, 'CSRF validation failed.')
+    else (
+      session:delete('authUser'),
+      session:delete('requestPath'),
+      session:delete('csrfToken'),
+      web:redirect('/samphire/login')
+    )
   };

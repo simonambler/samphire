@@ -241,7 +241,10 @@ declare
                       <button class="btn btn-demo" type="submit">Load demo database</button>
                     </form>
                 }
-                <a class="btn btn-secondary" href="/samphire/logout">Logout</a>
+                <form action="/samphire/logout" method="post">
+                  <input type="hidden" name="csrfToken" value="{$csrfToken}" />
+                  <button class="btn btn-secondary" type="submit">Logout</button>
+                </form>
                 <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
                   Copyright © 2022-2026 Simon Ambler · <a href="/static/samphire/src/samphire.zip" target="_blank" style="color: #0891b2; text-decoration: none;">Source</a> · <a href="/static/samphire/LICENSE.txt" target="_blank" style="color: #0891b2; text-decoration: none;">License (AGPL-3.0)</a>
                 </p>
