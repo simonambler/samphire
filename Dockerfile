@@ -133,7 +133,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install apt packages.
 RUN apt-get update && \
-    apt-get install -y git sudo
+    apt-get install -y git sudo nano
 
 # Link source directory from workspace.
 RUN ln -s /workspaces/samphire/basex/restxq $JETTY_BASE/basex/deploy/${BASEX_APP_DIR}/samphire/restxq
