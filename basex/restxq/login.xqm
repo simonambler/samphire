@@ -33,6 +33,21 @@ declare function login:consume-request-path() as xs:string {
     else '/samphire/home'
 };
 
+declare function login:csrf-token() as xs:string {
+  let $existingToken := session:get('csrfToken')
+  return if (exists($existingToken) and normalize-space($existingToken) != '')
+    then $existingToken
+    else
+      let $newToken := random:uuid()
+      let $_ := session:set('csrfToken', $newToken)
+      return $newToken
+};
+
+declare function login:valid-csrf-token($providedToken as xs:string?) as xs:boolean {
+  let $sessionToken := session:get('csrfToken')
+  return exists($providedToken) and exists($sessionToken) and $providedToken = $sessionToken
+};
+
 (: Send a 401 with a custom WWW-Authenticate challenge. This prevents BaseX
   from adding its default Basic challenge, which would prompt the browser to
   show its built-in authentication dialog. :)
@@ -87,15 +102,23 @@ declare
   %perm:check("/samphire", "{$info}")
   function login:checkauth($info as map(*)) as element()? {
     let $authUser := session:get('authUser')
-    where empty($authUser)
-      and not(login:is-public-path($info?path))
+    let $method := $info?method
+    let $path := $info?path
+    let $isUnsafeMethod := $method = ('POST', 'PUT', 'PATCH', 'DELETE')
+    let $usesFormCsrfToken :=
+      ($method = 'POST' and $path = '/samphire/login') or
+      ($method = 'POST' and $path = '/samphire/home/load-demo')
     return
-      if ($info?method = 'GET' and not(request:header('X-Samphire-Request') = 'true'))
-      then (
-        session:set('requestPath', $info?path),
-        web:redirect('/samphire/login')
-      )
-      else login:unauthorized-response()
+      if ($isUnsafeMethod and not(request:header('X-Samphire-Request') = 'true') and not($usesFormCsrfToken))
+      then web:error(403, 'CSRF validation failed.')
+      else if (empty($authUser) and not(login:is-public-path($path))) then
+        if ($method = 'GET')
+        then (
+          session:set('requestPath', $path),
+          web:redirect('/samphire/login')
+        )
+        else login:unauthorized-response()
+      else ()
   };
 
 declare
@@ -129,6 +152,7 @@ declare
   %output:method("html")
   function login:login($error as xs:string?) as element() {
     let $authUser := session:get('authUser')
+    let $csrfToken := login:csrf-token()
     let $loginError := if (exists($error))
       then <p class="error">Wrong username or password.</p>
       else ()
@@ -278,6 +302,7 @@ declare
           <p class="subtitle">Please log in to continue</p>
           {$loginError}
           <form action="/samphire/login" method="post">
+            <input type="hidden" name="csrfToken" value="{$csrfToken}" />
             <div class="form-group">
               <label for="name">Username</label>
               <input type="text" id="name" name="name" required="required" autofocus="autofocus" placeholder="Enter your username" />
@@ -299,14 +324,17 @@ declare
   %rest:POST
   %rest:form-param("name", "{$name}")
   %rest:form-param("pass", "{$pass}")
-  function login:checkpass($name as xs:string, $pass as xs:string) as element() {
-    try {
-      user:check($name, $pass),
-      session:set('authUser', $name),
-      web:redirect(login:consume-request-path())
-    } catch user:* {
-      web:redirect('/samphire/login?error=1')
-    }
+  %rest:form-param("csrfToken", "{$csrfToken}")
+  function login:checkpass($name as xs:string, $pass as xs:string, $csrfToken as xs:string?) as element() {
+    if (not(login:valid-csrf-token($csrfToken))) then
+      web:error(403, 'CSRF validation failed.')
+    else try {
+        user:check($name, $pass),
+        session:set('authUser', $name),
+        web:redirect(login:consume-request-path())
+      } catch user:* {
+        web:redirect('/samphire/login?error=1')
+      }
   };
 
 declare

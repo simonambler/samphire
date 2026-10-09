@@ -29,6 +29,21 @@ import module namespace session = 'http://basex.org/modules/session';
 declare variable $page:demo-database-name := 'demo';
 declare variable $page:demo-database-source := '/var/lib/jetty/basex/sample/demo';
 
+declare function page:csrf-token() as xs:string {
+  let $existingToken := session:get('csrfToken')
+  return if (exists($existingToken) and normalize-space($existingToken) != '')
+    then $existingToken
+    else
+      let $newToken := random:uuid()
+      let $_ := session:set('csrfToken', $newToken)
+      return $newToken
+};
+
+declare function page:valid-csrf-token($providedToken as xs:string?) as xs:boolean {
+  let $sessionToken := session:get('csrfToken')
+  return exists($providedToken) and exists($sessionToken) and $providedToken = $sessionToken
+};
+
 declare
   %updating
   %rest:path('/samphire')
@@ -44,6 +59,7 @@ declare
   %output:version("5.0")
   function page:home() as element(Q{http://www.w3.org/1999/xhtml}html) {
     let $authUser := session:get('authUser')
+    let $csrfToken := page:csrf-token()
     let $databases := sort(db:list())
     let $databaseLinks :=
       for $database in $databases
@@ -221,6 +237,7 @@ declare
                     <div class="db-grid">{ $databaseLinks }</div>
                   else
                     <form class="demo-form" action="/samphire/home/load-demo" method="post">
+                      <input type="hidden" name="csrfToken" value="{$csrfToken}" />
                       <button class="btn btn-demo" type="submit">Load demo database</button>
                     </form>
                 }
@@ -237,8 +254,11 @@ declare
   %updating
   %rest:path('/samphire/home/load-demo')
   %rest:POST
-  function page:load-demo() as empty-sequence() {
-    (
+  %rest:form-param('csrfToken', '{$csrfToken}')
+  function page:load-demo($csrfToken as xs:string?) as empty-sequence() {
+    if (not(page:valid-csrf-token($csrfToken))) then
+      web:error(403, 'CSRF validation failed.')
+    else (
       if (not(db:exists($page:demo-database-name))) then
         db:create(
           $page:demo-database-name,
