@@ -216,7 +216,7 @@ declare
           <div id="splash-screen">
             <div><h1>Samphire</h1></div>
           </div>
-          <div id="app">{ $output }</div>
+          <div id="app" data-auth-user="{$authUser}">{ $output }</div>
         </body>
       </html>
   };

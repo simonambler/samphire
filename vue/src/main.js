@@ -34,8 +34,14 @@ import YSummary from './components/YSummary.vue'
 import YTally from './components/YTally.vue'
 import YText from './components/YText.vue'
 import YTitle from './components/YTitle.vue'
+import SessionDialog from './components/SessionDialog.vue'
 
 import './assets/main.css'
+
+// Mount outside the server-rendered sheet, so every sheet gets the dialog.
+const sessionHost = document.createElement('div')
+document.body.appendChild(sessionHost)
+createApp(SessionDialog).mount(sessionHost)
 
 const app = createApp({})
 

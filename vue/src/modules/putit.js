@@ -17,9 +17,11 @@
  */
 'use strict';
 
+import request from './request.js';
+
 export default async function(url, headers, data, onSucceed, onFail, onDone) {
   try {
-    const response = await fetch(url, {
+    const response = await request(url, {
       method: 'PUT',
       headers: headers,
       body: data

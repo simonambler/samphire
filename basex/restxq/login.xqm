@@ -22,7 +22,7 @@ declare namespace perm = 'http://basex.org/modules/perm';
 import module namespace session = 'http://basex.org/modules/session';
 
 declare function login:is-public-path($path as xs:string?) as xs:boolean {
-  $path = ('/samphire/login')
+  $path = ('/samphire/login', '/samphire/login/session')
 };
 
 declare function login:consume-request-path() as xs:string {
@@ -31,6 +31,17 @@ declare function login:consume-request-path() as xs:string {
   return if (exists($requestPath) and normalize-space($requestPath) != '')
     then $requestPath
     else '/samphire/home'
+};
+
+(: Send a 401 with a custom WWW-Authenticate challenge. This prevents BaseX
+  from adding its default Basic challenge, which would prompt the browser to
+  show its built-in authentication dialog. :)
+declare function login:unauthorized-response() as element() {
+  web:response-header(
+    (),
+    map { 'WWW-Authenticate': 'Samphire realm="Samphire"', 'Cache-Control': 'no-store' },
+    map { 'status': 401, 'message': 'Unauthorized' }
+  )
 };
 
 (: Compute access rights for a user to a document
@@ -79,12 +90,12 @@ declare
     where empty($authUser)
       and not(login:is-public-path($info?path))
     return
-      if ($info?method = 'GET')
+      if ($info?method = 'GET' and not(request:header('X-Samphire-Request') = 'true'))
       then (
         session:set('requestPath', $info?path),
         web:redirect('/samphire/login')
       )
-      else web:error(401, 'Unauthorized')
+      else login:unauthorized-response()
   };
 
 declare
@@ -99,6 +110,8 @@ declare
     let $path := $database || '/' || $type || '/' || $document || '.xml'
     where doc-available($path)
     let $authUser := session:get('authUser')
+    (: Let checkauth return 401, rather than evaluating rights for an empty user. :)
+    where exists($authUser)
     let $method := $info?method
     let $doc := doc($path)
     let $sheet := $doc/y-sheet
@@ -293,6 +306,24 @@ declare
       web:redirect(login:consume-request-path())
     } catch user:* {
       web:redirect('/samphire/login?error=1')
+    }
+  };
+
+declare
+  %rest:path('/samphire/login/session')
+  %rest:POST
+  %rest:form-param('name', '{$name}')
+  %rest:form-param('pass', '{$pass}')
+  function login:renew-session($name as xs:string, $pass as xs:string) as element() {
+    (: The custom header prevents cross-origin form submissions to this endpoint. :)
+    if (not(request:header('X-Samphire-Request') = 'true')) then
+      web:error(403, 'Forbidden')
+    else try {
+      user:check($name, $pass),
+      session:set('authUser', $name),
+      web:response-header((), map { 'Cache-Control': 'no-store' }, map { 'status': 204 })
+    } catch user:* {
+      login:unauthorized-response()
     }
   };
 

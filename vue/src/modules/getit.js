@@ -18,9 +18,11 @@
 
 'use strict';
 
+import request from './request.js';
+
 export default async function(url, onSucceed, onFail, onDone) {
   try {
-    const response = await fetch(url);
+    const response = await request(url);
     if (response.ok) {
       const data = await response.text();
       if (onSucceed) onSucceed(data);
