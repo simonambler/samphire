@@ -24,7 +24,7 @@
             <font-awesome-icon icon="ellipsis"/>
         </slot>
     </div>
-    <div v-if="showModal" class="modal-overlay" @click="closeModal">
+    <div v-if="showModal" class="modal-overlay" @click="closeModal(false)">
         <div class="modal-content" @click.stop>
              <slot name="content">
                 <p>This is the modal content.</p>
