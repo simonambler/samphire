@@ -24,17 +24,18 @@
             <font-awesome-icon icon="ellipsis"/>
         </slot>
     </div>
-    <div v-if="showModal" class="modal-overlay" @click="closeModal(false)">
+    <dialog v-if="showModal" ref="dialog" class="modal-dialog"
+        @cancel.prevent="closeModal(false)" @click.self="closeModal(false)">
         <div class="modal-content" @click.stop>
              <slot name="content">
                 <p>This is the modal content.</p>
              </slot>
             <div class="modal-footer">
-                <button @click="closeModal(false)">{{ rejectButton }}</button>
-                <button @click="closeModal(true)">{{ acceptButton }}</button>
+                <button type="button" @click="closeModal(false)">{{ rejectButton }}</button>
+                <button type="button" @click="closeModal(true)">{{ acceptButton }}</button>
             </div>
         </div>
-    </div>
+    </dialog>
 </template>
 
 <script setup>
@@ -63,20 +64,25 @@ const props = defineProps({
     },
 });
 
-import { ref } from 'vue';
+import { nextTick, ref } from 'vue';
 
 const emit = defineEmits(['open', 'close']);
 
 const showModal = ref(false);
+const dialog = ref(null);
 
-const openModal = () => {
-    if (!props.disabled) {
+const openModal = async () => {
+    if (!props.disabled && !showModal.value) {
         showModal.value = true;
         emit('open');
+        await nextTick();
+        dialog.value?.showModal();
     }
 };
 
 const closeModal = (accepted) => {
+    if (!showModal.value) return;
+    dialog.value?.close();
     showModal.value = false;
     emit('close', accepted);
 };
@@ -86,31 +92,32 @@ const closeModal = (accepted) => {
 <style scoped>
 @layer sfc {
 
-    .modal-overlay {
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
+    .modal-dialog {
+        width: min(500px, calc(100vw - 32px));
+        max-width: none;
+        max-height: calc(100vh - 32px);
+        /* Let dropdowns extend beyond the native dialog's frame. */
+        overflow: visible;
+        padding: 0;
+        border: 0;
+        border-radius: 5px;
+        color: inherit;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
+    .modal-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .modal-content {
         background-color: white;
         padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        width: 100%;
     }
 
     .modal-footer {
         display: flex;
         justify-content: flex-end;
+        gap: 10px;
         margin-top: 20px;
     }
 
