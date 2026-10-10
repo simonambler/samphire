@@ -27,6 +27,7 @@ export default defineConfig({
   build: {
     // generate .vite/manifest.json in outDir
     manifest: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       // overwrite default .html entry
       input: 'src/main.js',
