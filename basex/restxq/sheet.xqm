@@ -28,6 +28,21 @@ import module namespace login = "http://www.jsodium.org/samphire/login" at "logi
 import module namespace summary = "http://www.jsodium.org/samphire/summary" at "summary.xqm";
 import module namespace session = 'http://basex.org/modules/session';
 
+declare function sheet:csrf-token() as xs:string {
+  let $existingToken := session:get('csrfToken')
+  return if (exists($existingToken) and normalize-space($existingToken) != '')
+    then $existingToken
+    else
+      let $newToken := random:uuid()
+      let $_ := session:set('csrfToken', $newToken)
+      return $newToken
+};
+
+declare function sheet:valid-csrf-token($providedToken as xs:string?) as xs:boolean {
+  let $sessionToken := session:get('csrfToken')
+  return exists($providedToken) and exists($sessionToken) and $providedToken = $sessionToken
+};
+
 declare
   %rest:path("/samphire/data/{$database}/type/{$type}/sheet/{$document}")
   %rest:GET
@@ -321,8 +336,12 @@ declare
   %rest:path("/samphire/data/{$database}/type/{$type}/upload")
   %rest:POST
   %rest:form-param("file", "{$file}")
-  function sheet:upload($database as xs:string, $type as xs:string, $file as item()?) as empty-sequence()
+  %rest:form-param("csrfToken", "{$csrfToken}")
+  function sheet:upload($database as xs:string, $type as xs:string, $file as item()?, $csrfToken as xs:string?) as empty-sequence()
   {
+    if (not(sheet:valid-csrf-token($csrfToken))) then
+      web:error(403, 'CSRF validation failed.')
+    else
     let $authUser := session:get('authUser')
     let $key := $file[. instance of map(*)] ! map:keys(.)
     return
@@ -381,6 +400,7 @@ declare
     let $backHref := concat('/samphire/data/', $database, '/view')
     let $uploadHref := concat('/samphire/data/', $database, '/type/', $type, '/upload')
     let $authUser := session:get('authUser')
+    let $csrfToken := sheet:csrf-token()
     let $docs :=
       let $collection := collection($database || '/' || $type)
       for $doc in $collection
@@ -450,6 +470,7 @@ declare
             <a class="back-link" href="{ $backHref }">&#8592; { $database }</a>
             <div class="upload-row">
               <form class="upload-form" method="post" enctype="multipart/form-data" autocomplete="off" action="{ $uploadHref }">
+                <input type="hidden" name="csrfToken" value="{ $csrfToken }" />
                 <input id="upload-file" type="file" name="file" accept=".xml,application/xml,text/xml" required="required" />
                 <button type="submit">Upload XML</button>
               </form>

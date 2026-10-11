@@ -109,7 +109,8 @@ declare
     let $usesFormCsrfToken :=
       ($method = 'POST' and $path = '/samphire/login') or
       ($method = 'POST' and $path = '/samphire/home/load-demo') or
-      ($method = 'POST' and $path = '/samphire/logout')
+      ($method = 'POST' and $path = '/samphire/logout') or
+      ($method = 'POST' and matches($path, '^/samphire/data/[^/]+/type/[^/]+/upload$'))
     return
       if ($isUnsafeMethod and not(request:header('X-Samphire-Request') = 'true') and not($usesFormCsrfToken))
       then web:error(403, 'CSRF validation failed.')
